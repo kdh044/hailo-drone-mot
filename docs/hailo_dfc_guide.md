@@ -81,7 +81,7 @@ hailo --help        # parser / optimize / compiler / profiler 명령이 보이�
 
 - **Hailo에 넣는 부분:** backbone, neck, 그리고 스케일별 `cls` conv와 `reg` conv까지입니다. 출력은 6개입니다.
 - **CPU에 남기는 부분:** DFL decode(64채널을 박스 4개 값으로 변환), sigmoid, NMS입니다. 이런 연산은 INT8로 바꾸면 오차가 커지거나 NPU에서 지원되지 않습니다.
-- **입력 크기:** `1×3×640×640`으로 고정합니다.
+- **입력 크기:** `1×3×640×640`으로 고정합니다. RemDet이 640×640으로 학습됐기 때문에(`img_scale = (640, 640)`) 같은 크기로 맞춥니다. 학습과 다른 크기로 넣으면 물체 크기 분포가 달라져 정확도가 떨어질 수 있습니다.
 
 **따라하기** (RemDet 학습 환경이 있는 PC, `RemDet` 폴더에서)
 
@@ -188,8 +188,40 @@ model_optimization_flavor(optimization_level=2, compression_level=0)
 | 명령 | 의미 | 이 프로젝트 값 |
 |---|---|---|
 | `normalization(mean, std)` | 입력 정규화 `(x - mean) / std`를 HEF 안에 넣습니다. Pi에서는 UINT8 이미지를 그대로 넣으면 됩니다. | RemDet 학습 설정이 `mean=0, std=255`라서 같은 값 |
-| `optimization_level` | 0~4. 높을수록 양자화 오차를 더 많이 보정하지만 오래 걸리고 GPU가 필요합니다. | 2 |
-| `compression_level` | 0~5. 높을수록 일부 가중치를 4bit로 줄여 빨라지지만 정확도가 떨어질 수 있습니다. | 0 (압축 안 함) |
+| `optimization_level` | 양자화 품질 단계(0~4). 아래 표 참고 | 2 |
+| `compression_level` | 4bit 압축 단계(0~5). 아래 표 참고 | 0 |
+
+#### 최적화 레벨(`optimization_level`): 양자화 품질
+
+레벨이 높을수록 INT8로 바꿀 때 생기는 오차를 더 많이 보정해서 **정확도가 FP32에 가까워집니다.** 대신 시간이 오래 걸리고, 레벨 2 이상은 사실상 **GPU가 필요합니다.**
+
+| 레벨 | 적용되는 알고리즘 | 필요한 캘리브레이션 | 품질 | 비고 |
+|---|---|---|---|---|
+| 0 | Equalization (레이어 간 값 범위를 고르게 맞춤) | 적음 | 가장 낮음 | 빠름. GPU 불필요 |
+| 1 | Equalization + Iterative bias correction (반올림으로 생긴 평균 오차 보정) | 적음 | 낮음 | GPU 불필요 |
+| 2 | Equalization + **Finetune** (INT8 모델을 4 epoch 짧게 재학습) | **1024장** | 높음 | **GPU 권장. 기본값** |
+| 3 | Equalization + **AdaRound** (가중치를 올림/내림 중 어느 쪽으로 반올림할지 학습) | 256장 | 매우 높음 | GPU 필수, 메모리 많이 씀 |
+| 4 | Equalization + AdaRound | **1024장** | 가장 높음 | GPU 필수, 몇 시간 걸릴 수 있음 |
+
+<sub>출처: [RidgeRun: Hailo Model Scripts](https://developer.ridgerun.com/wiki/index.php/Hailo/Hailo-8/AI_Software_and_Tools/Hailo_Model_Scripts) (DFC User Guide 기준, 버전마다 달라질 수 있음)</sub>
+
+> **GPU가 없거나 캘리브레이션 이미지가 1024장보다 적으면** DFC가 레벨을 자동으로 낮춥니다. 레벨을 따로 지정하지 않으면 **0까지 내려가고 압축도 건너뛰어** 정확도가 눈에 띄게 떨어질 수 있습니다. ([커뮤니티](https://community.hailo.ai/t/custom-model-for-raspberry-pi-5-fails-on-hailo-dataflow-compiler/2704))
+> 그래서 **GPU가 있는 PC에서 캘리브레이션 1024장으로 레벨 2 이상**을 권장합니다. 최적화 로그에 실제로 적용된 레벨이 찍히니 꼭 확인하세요.
+
+#### 압축 레벨(`compression_level`): 속도 vs 정확도
+
+가중치 일부를 8bit보다 더 작은 **4bit**로 줄입니다. 모델이 칩에 더 잘 들어가 빨라질 수 있지만 정확도는 떨어집니다.
+
+| 레벨 | 4bit로 바꾸는 가중치 비율 |
+|---|---|
+| 0 | 0% (압축 안 함) |
+| 1 | 20% |
+| 2 | 40% |
+| 3 | 60% |
+| 4 | 80% |
+| 5 | 100% |
+
+<sub>모델이 충분히 클 때만 적용됩니다. 작은 객체가 많은 드론 영상에서는 정확도가 중요해서 이 프로젝트는 0을 씁니다.</sub>
 
 ### 3-3. 실행
 
@@ -311,7 +343,7 @@ remdet_s_visdrone.hef  images=195  avg dets=43.8 (max 131)
 
 1. **전처리 불일치:** 캘리브레이션(3단계), 추론(5단계), 학습의 리사이즈 방식과 RGB/BGR 순서가 같은지 확인합니다.
 2. **캘리브레이션 데이터:** 1024장 이상인지, 실제 드론 영상과 비슷한 이미지인지 확인합니다.
-3. **최적화 레벨:** GPU가 있는 PC에서 `optimization_level`을 2 이상으로 올립니다.
+3. **최적화 레벨:** 로그에서 실제 적용된 레벨을 확인합니다. GPU가 없으면 0으로 내려갔을 수 있습니다. GPU가 있는 PC에서 2 이상으로 다시 돌립니다.
 4. **압축:** `compression_level`을 0으로 내립니다.
 5. **끝 노드 위치:** sigmoid나 decode 같은 연산이 HEF 안에 남아 있지 않은지 확인합니다(1단계).
 6. 비슷한 사례: [커스텀 모델 정확도 저하](https://community.hailo.ai/t/the-accuracy-of-the-custom-trained-yolov8m-model-is-low/4859)
