@@ -3,7 +3,11 @@
 Hailo-8에서 모델을 돌리려면 **HEF**(Hailo Executable Format) 파일이 있어야 합니다.
 HEF는 Hailo가 배포하는 **Dataflow Compiler(DFC)** 로 만듭니다. 이 과정에서 FP32 모델이 **INT8로 양자화**되고 Hailo-8 칩 구조에 맞게 배치됩니다. 이 프로젝트에서 말하는 "경량화"가 바로 이 과정입니다.
 
-> 이 문서는 아래 [참고 자료](#참고-자료)에 있는 Hailo 공식 문서와 커뮤니티 글을 바탕으로 정리했습니다.
+> 이 문서는 Hailo 공식 문서를 참고해 작성했습니다.
+> - [Hailo Dataflow Compiler User Guide](https://hailo.ai/developer-zone/documentation/) (Developer Zone, 로그인 필요)
+> - [Hailo Model Zoo: Getting Started](https://github.com/hailo-ai/hailo_model_zoo/blob/master/docs/GETTING_STARTED.rst)
+> - [HailoRT](https://github.com/hailo-ai/hailort)
+>
 > DFC 버전마다 옵션 이름이 조금씩 다르니 실제로 쓰기 전에 `hailo <명령> --help`로 확인하세요.
 
 ---
