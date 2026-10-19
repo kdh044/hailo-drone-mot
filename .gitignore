@@ -1,0 +1,33 @@
+# 모델/데이터/결과물은 레포에 올리지 않음
+*.hef
+*.onnx
+*.pt
+*.pth
+*.pkl
+*.zip
+*.mp4
+*.jpg
+*.png
+*.log
+venv/
+__pycache__/
+models/
+yolov8s_onnx/
+mot_out/
+0/
+mot/data/
+mot/dets/
+mot/map/
+mot/figs/
+mot/videos/
+mot/weights/
+mot/survey/
+mot/notes/
+mot/*.json
+*.so
+mot/*.txt
+/0
+
+# README 이미지는 포함
+!docs/assets/
+!docs/assets/*
