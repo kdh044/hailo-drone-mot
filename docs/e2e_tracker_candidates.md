@@ -29,15 +29,16 @@ LaSOT AUC를 우리 VisDrone 5개 대상 AUC 77.1 등과 직접 비교하면 안
 공식 README: https://github.com/kangben258/UETrack
 논문: https://arxiv.org/abs/2603.01412
 
-현재 모델들에 대해 이 프로젝트에서 수행한 학습/양자화/HEF 컴파일/실행은 없다.
+OSTrack의 실제 ONNX 내보내기 및 DFC 검증 결과는 [호환성 실험](ostrack_hailo_probe.md)에 기록한다.
+UETrack/SUTrack의 학습·양자화·HEF 실행은 아직 수행하지 않았다.
 Hailo-8에서 지원되는 연산·고정 입력·여러 입력의 구성, 메모리, 양자화 오차를
 실제로 검증해야 한다. CPU 또는 다른 GPU에서 빠르다는 이유로 Hailo 호환을 가정하지 않는다.
 
 ## 속도 측정과 실패 판단
 
 [동일 조건 시스템 벤치마크](../sot/SYSTEM_BENCHMARK.md)를 준비했다.
-현재 에이전트 실행 환경에는 `/dev/hailo0`가 없어 실제 E2E 속도 측정은 미완료.
-검출 캐시로 네 방법의 상태 전환을 검사했지만 hardware_e2e_fps는 null로 남긴다.
+장치 접근 복구 후 네 방법의 실제 Hailo 포함 속도 측정을 수행한다.
+[실측 결과](../sot/results/system_comparison.md)와 캐시 로직 검사를 구분한다.
 
 현재 실패 기준은 native 성공/실패와 유효한 박스 여부뿐이다.
 CSRT가 잘못된 다른 객체를 따라가면서 성공을 반환하는 drift는 이 기준으로 못 잡는다.

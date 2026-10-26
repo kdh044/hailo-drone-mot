@@ -2,9 +2,9 @@
 
 실행 코드: `benchmark_system.py`. ROI 입력은 사용하지 않는다.
 
-현재 원격 에이전트 실행 환경에서는 `/dev/hailo0`가 보이지 않아 실제 Hailo
-전체 속도를 측정하지 못했다. 아래 명령은 Pi 호스트 터미널에서 실행해야 한다.
-기존 FPS와 새 FPS를 동일 실험인 것처럼 섞지 않는다.
+2026-10-26: 장치 접근이 가능해져 실제 Hailo 포함 측정을 실행했다.
+결과는 `results/system_comparison.md`, 상세 요약은 `results/system_suite.summary.json`.
+기존 병렬 FPS와 이번 직렬 FPS는 별도 조건이다.
 
 ## Pi에서 실행
 
@@ -70,3 +70,17 @@ Python 버전이 다르면 `--mot-site-packages` 경로를 그대로 혼합하�
 지역 복구는 초기 템플릿 NCC>=.85라는 미검증 휴리스틱이다. 이것을 신뢰성 있는
 drift detector 또는 ReID라고 주장하지 않는다. 향후 외형 일치, 이동/크기 변화,
 필요 시 순차 검출 확인 등을 추가하고 별도 검증 데이터에서 오탐·미탐을 재야 한다.
+
+## 대상별 반복 및 상태 전환 검사
+
+```bash
+~/sot-venv/bin/python sot/check_recovery.py
+~/sot-venv/bin/python sot/run_system_suite.py
+~/sot-venv/bin/python sot/report_system.py
+```
+
+5개 대상은 기존 Holdfast가 선택에 성공했던 5/13개에 한정된다.
+초기 검출 박스를 선택 영역으로 사용하며 GT는 사후 채점에만 사용한다.
+각 대상의 시작 프레임과 길이를 유지하고 3회 순서를 바꾸어 반복한다.
+`Engine.select_target(box)`는 기존 추적을 종료하고 DETECT로 돌아간다.
+합성 상태 전환 검사는 실제 drift/재식별 검증과 별개다.

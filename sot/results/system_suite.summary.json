@@ -1,0 +1,2316 @@
+{
+  "protocol": "Five previously acquired VisDrone targets; original full JPEG input; same detector and serial pipeline; three rotated trials; detector-derived selection box; GT used offline only; no ROI input; initial frame excluded from scores",
+  "coverage": "5/13 previously acquired targets; conditional diagnostic, not official UAV123 results",
+  "recovery": "Native failure/invalid box then local NCC recovery; drift with valid boxes can be missed; recovered identity not guaranteed",
+  "results": [
+    {
+      "method": "KCF",
+      "trial": 1,
+      "frames": 200,
+      "wall_seconds": 4.584770939000009,
+      "cpu_one_core_pct": 97.29959407684143,
+      "temperature_start_c": 60.6,
+      "temperature_end_c": 60.05,
+      "hardware_e2e_fps": 43.62268097163046,
+      "read_to_prediction_p50_ms": 15.865099499933422,
+      "read_to_prediction_p95_ms": 63.25936399771307,
+      "detection_calls": 9,
+      "recovery_frames": 40,
+      "missing_outputs": 48,
+      "sequence": "uav0000086_00000_v",
+      "target": [
+        "pedestrian",
+        11
+      ],
+      "metrics": {
+        "auc": 0.015553960277578369,
+        "precision20": 0.01507537688442211,
+        "mean_iou": 0.015206790377931462,
+        "success50": 0.01507537688442211,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 9,
+        "TRACK->RECOVER": 8,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 8
+      },
+      "severe_error_with_output_frames": 147,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.16839055573736
+    },
+    {
+      "method": "CSRT",
+      "trial": 1,
+      "frames": 200,
+      "wall_seconds": 16.829893148002157,
+      "cpu_one_core_pct": 99.85298770595526,
+      "temperature_start_c": 61.15,
+      "temperature_end_c": 60.6,
+      "hardware_e2e_fps": 11.883616743207998,
+      "read_to_prediction_p50_ms": 83.97486149988254,
+      "read_to_prediction_p95_ms": 84.87273295031628,
+      "detection_calls": 1,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000086_00000_v",
+      "target": [
+        "pedestrian",
+        11
+      ],
+      "metrics": {
+        "auc": 0.14692510169897105,
+        "precision20": 0.23618090452261306,
+        "mean_iou": 0.14473883830688952,
+        "success50": 0.10050251256281408,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 130,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.086940000212053
+    },
+    {
+      "method": "bytetrack",
+      "trial": 1,
+      "frames": 200,
+      "wall_seconds": 6.526776917999086,
+      "cpu_one_core_pct": 57.85864628812386,
+      "temperature_start_c": 61.7,
+      "temperature_end_c": 60.05,
+      "hardware_e2e_fps": 30.64299615457272,
+      "read_to_prediction_p50_ms": 31.97368200017081,
+      "read_to_prediction_p95_ms": 37.82753555206,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 1,
+      "sequence": "uav0000086_00000_v",
+      "target": [
+        "pedestrian",
+        11
+      ],
+      "metrics": {
+        "auc": 0.7078248384781048,
+        "precision20": 1.0,
+        "mean_iou": 0.719185147390037,
+        "success50": 0.9045226130653267,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.284695600032137
+    },
+    {
+      "method": "holdfast",
+      "trial": 1,
+      "frames": 200,
+      "wall_seconds": 10.76716787300029,
+      "cpu_one_core_pct": 74.42290338106426,
+      "temperature_start_c": 60.6,
+      "temperature_end_c": 61.15,
+      "hardware_e2e_fps": 18.574986696503476,
+      "read_to_prediction_p50_ms": 53.73615700045775,
+      "read_to_prediction_p95_ms": 55.68275900059234,
+      "detection_calls": 200,
+      "recovery_frames": 4,
+      "missing_outputs": 9,
+      "sequence": "uav0000086_00000_v",
+      "target": [
+        "pedestrian",
+        11
+      ],
+      "metrics": {
+        "auc": 0.67264895908112,
+        "precision20": 0.9547738693467337,
+        "mean_iou": 0.684152828453087,
+        "success50": 0.8592964824120602,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 2,
+        "TRACK->RECOVER": 1,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 1
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.336514475104195
+    },
+    {
+      "method": "CSRT",
+      "trial": 2,
+      "frames": 200,
+      "wall_seconds": 16.821007449998433,
+      "cpu_one_core_pct": 99.85248489383179,
+      "temperature_start_c": 61.15,
+      "temperature_end_c": 62.8,
+      "hardware_e2e_fps": 11.88989426433068,
+      "read_to_prediction_p50_ms": 83.8225944989972,
+      "read_to_prediction_p95_ms": 86.17901694979082,
+      "detection_calls": 1,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000086_00000_v",
+      "target": [
+        "pedestrian",
+        11
+      ],
+      "metrics": {
+        "auc": 0.14692510169897105,
+        "precision20": 0.23618090452261306,
+        "mean_iou": 0.14473883830688952,
+        "success50": 0.10050251256281408,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 130,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.286088999157073
+    },
+    {
+      "method": "bytetrack",
+      "trial": 2,
+      "frames": 200,
+      "wall_seconds": 6.429561898999964,
+      "cpu_one_core_pct": 57.26877919275823,
+      "temperature_start_c": 62.8,
+      "temperature_end_c": 61.7,
+      "hardware_e2e_fps": 31.10631846177691,
+      "read_to_prediction_p50_ms": 32.110775500768796,
+      "read_to_prediction_p95_ms": 32.69005544771062,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 1,
+      "sequence": "uav0000086_00000_v",
+      "target": [
+        "pedestrian",
+        11
+      ],
+      "metrics": {
+        "auc": 0.7078248384781048,
+        "precision20": 1.0,
+        "mean_iou": 0.719185147390037,
+        "success50": 0.9045226130653267,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.141853390006872
+    },
+    {
+      "method": "holdfast",
+      "trial": 2,
+      "frames": 200,
+      "wall_seconds": 10.724898816999485,
+      "cpu_one_core_pct": 74.27990862135499,
+      "temperature_start_c": 61.15,
+      "temperature_end_c": 60.6,
+      "hardware_e2e_fps": 18.648194580912065,
+      "read_to_prediction_p50_ms": 53.660759498598054,
+      "read_to_prediction_p95_ms": 54.18024714963394,
+      "detection_calls": 200,
+      "recovery_frames": 4,
+      "missing_outputs": 9,
+      "sequence": "uav0000086_00000_v",
+      "target": [
+        "pedestrian",
+        11
+      ],
+      "metrics": {
+        "auc": 0.67264895908112,
+        "precision20": 0.9547738693467337,
+        "mean_iou": 0.684152828453087,
+        "success50": 0.8592964824120602,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 2,
+        "TRACK->RECOVER": 1,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 1
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.327408354998624
+    },
+    {
+      "method": "KCF",
+      "trial": 2,
+      "frames": 200,
+      "wall_seconds": 4.648336493999523,
+      "cpu_one_core_pct": 97.28779075778478,
+      "temperature_start_c": 61.15,
+      "temperature_end_c": 61.7,
+      "hardware_e2e_fps": 43.026145000082806,
+      "read_to_prediction_p50_ms": 16.233536500294576,
+      "read_to_prediction_p95_ms": 63.66728769808104,
+      "detection_calls": 9,
+      "recovery_frames": 40,
+      "missing_outputs": 48,
+      "sequence": "uav0000086_00000_v",
+      "target": [
+        "pedestrian",
+        11
+      ],
+      "metrics": {
+        "auc": 0.015553960277578369,
+        "precision20": 0.01507537688442211,
+        "mean_iou": 0.015206790377931462,
+        "success50": 0.01507537688442211,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 9,
+        "TRACK->RECOVER": 8,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 8
+      },
+      "severe_error_with_output_frames": 147,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.173523555871927
+    },
+    {
+      "method": "bytetrack",
+      "trial": 3,
+      "frames": 200,
+      "wall_seconds": 6.444916196996928,
+      "cpu_one_core_pct": 57.421177279611435,
+      "temperature_start_c": 61.7,
+      "temperature_end_c": 61.7,
+      "hardware_e2e_fps": 31.032211108220764,
+      "read_to_prediction_p50_ms": 32.11544250007137,
+      "read_to_prediction_p95_ms": 32.747564651072025,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 1,
+      "sequence": "uav0000086_00000_v",
+      "target": [
+        "pedestrian",
+        11
+      ],
+      "metrics": {
+        "auc": 0.7078248384781048,
+        "precision20": 1.0,
+        "mean_iou": 0.719185147390037,
+        "success50": 0.9045226130653267,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.172948070005077
+    },
+    {
+      "method": "holdfast",
+      "trial": 3,
+      "frames": 200,
+      "wall_seconds": 10.792048514998896,
+      "cpu_one_core_pct": 74.53301241947598,
+      "temperature_start_c": 62.25,
+      "temperature_end_c": 61.7,
+      "hardware_e2e_fps": 18.53216279764106,
+      "read_to_prediction_p50_ms": 53.7786770000821,
+      "read_to_prediction_p95_ms": 57.247185599771875,
+      "detection_calls": 200,
+      "recovery_frames": 4,
+      "missing_outputs": 9,
+      "sequence": "uav0000086_00000_v",
+      "target": [
+        "pedestrian",
+        11
+      ],
+      "metrics": {
+        "auc": 0.67264895908112,
+        "precision20": 0.9547738693467337,
+        "mean_iou": 0.684152828453087,
+        "success50": 0.8592964824120602,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 2,
+        "TRACK->RECOVER": 1,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 1
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.393246829873533
+    },
+    {
+      "method": "KCF",
+      "trial": 3,
+      "frames": 200,
+      "wall_seconds": 4.591734451001685,
+      "cpu_one_core_pct": 97.27847029624255,
+      "temperature_start_c": 61.7,
+      "temperature_end_c": 62.8,
+      "hardware_e2e_fps": 43.55652578218457,
+      "read_to_prediction_p50_ms": 16.056777500125463,
+      "read_to_prediction_p95_ms": 63.15101304990093,
+      "detection_calls": 9,
+      "recovery_frames": 40,
+      "missing_outputs": 48,
+      "sequence": "uav0000086_00000_v",
+      "target": [
+        "pedestrian",
+        11
+      ],
+      "metrics": {
+        "auc": 0.015553960277578369,
+        "precision20": 0.01507537688442211,
+        "mean_iou": 0.015206790377931462,
+        "success50": 0.01507537688442211,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 9,
+        "TRACK->RECOVER": 8,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 8
+      },
+      "severe_error_with_output_frames": 147,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.174176111044492
+    },
+    {
+      "method": "CSRT",
+      "trial": 3,
+      "frames": 200,
+      "wall_seconds": 16.709525420999853,
+      "cpu_one_core_pct": 99.86181364570149,
+      "temperature_start_c": 61.7,
+      "temperature_end_c": 61.7,
+      "hardware_e2e_fps": 11.969220846251451,
+      "read_to_prediction_p50_ms": 83.37008750095265,
+      "read_to_prediction_p95_ms": 84.32964564854046,
+      "detection_calls": 1,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000086_00000_v",
+      "target": [
+        "pedestrian",
+        11
+      ],
+      "metrics": {
+        "auc": 0.14692510169897105,
+        "precision20": 0.23618090452261306,
+        "mean_iou": 0.14473883830688952,
+        "success50": 0.10050251256281408,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 130,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.264830000698566
+    },
+    {
+      "method": "KCF",
+      "trial": 1,
+      "frames": 200,
+      "wall_seconds": 11.728794093000033,
+      "cpu_one_core_pct": 99.74207914504964,
+      "temperature_start_c": 62.25,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 17.052051422691765,
+      "read_to_prediction_p50_ms": 58.58751350206148,
+      "read_to_prediction_p95_ms": 60.11762995058234,
+      "detection_calls": 1,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000137_00458_v",
+      "target": [
+        "car",
+        13
+      ],
+      "metrics": {
+        "auc": 0.8109595597032783,
+        "precision20": 0.9949748743718593,
+        "mean_iou": 0.8287126290730608,
+        "success50": 1.0,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 24.911112002882874
+    },
+    {
+      "method": "CSRT",
+      "trial": 1,
+      "frames": 200,
+      "wall_seconds": 23.17598469600125,
+      "cpu_one_core_pct": 99.92541133752029,
+      "temperature_start_c": 63.35,
+      "temperature_end_c": 63.9,
+      "hardware_e2e_fps": 8.629622543481732,
+      "read_to_prediction_p50_ms": 115.26374599998235,
+      "read_to_prediction_p95_ms": 118.75993850226223,
+      "detection_calls": 1,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000137_00458_v",
+      "target": [
+        "car",
+        13
+      ],
+      "metrics": {
+        "auc": 0.8435032304379039,
+        "precision20": 0.9949748743718593,
+        "mean_iou": 0.8597365740735633,
+        "success50": 1.0,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 24.956649998784997
+    },
+    {
+      "method": "bytetrack",
+      "trial": 1,
+      "frames": 200,
+      "wall_seconds": 10.575746753998828,
+      "cpu_one_core_pct": 73.95353022274972,
+      "temperature_start_c": 62.25,
+      "temperature_end_c": 62.8,
+      "hardware_e2e_fps": 18.91119413618498,
+      "read_to_prediction_p50_ms": 52.83532550129166,
+      "read_to_prediction_p95_ms": 54.60467104803682,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 1,
+      "sequence": "uav0000137_00458_v",
+      "target": [
+        "car",
+        13
+      ],
+      "metrics": {
+        "auc": 0.9140942809284519,
+        "precision20": 1.0,
+        "mean_iou": 0.9353494107394918,
+        "success50": 1.0,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 24.529180334884586
+    },
+    {
+      "method": "holdfast",
+      "trial": 1,
+      "frames": 200,
+      "wall_seconds": 17.356030783001188,
+      "cpu_one_core_pct": 84.28593995308884,
+      "temperature_start_c": 62.8,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 11.52337204863013,
+      "read_to_prediction_p50_ms": 86.6614219994517,
+      "read_to_prediction_p95_ms": 89.39435109878104,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000137_00458_v",
+      "target": [
+        "car",
+        13
+      ],
+      "metrics": {
+        "auc": 0.9136156975352957,
+        "precision20": 1.0,
+        "mean_iou": 0.9355952029369957,
+        "success50": 1.0,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 24.76832470003501
+    },
+    {
+      "method": "CSRT",
+      "trial": 2,
+      "frames": 200,
+      "wall_seconds": 23.110140168002545,
+      "cpu_one_core_pct": 99.92035808580668,
+      "temperature_start_c": 63.35,
+      "temperature_end_c": 62.8,
+      "hardware_e2e_fps": 8.6542097341717,
+      "read_to_prediction_p50_ms": 115.12631350160518,
+      "read_to_prediction_p95_ms": 118.26540734728042,
+      "detection_calls": 1,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000137_00458_v",
+      "target": [
+        "car",
+        13
+      ],
+      "metrics": {
+        "auc": 0.8435032304379039,
+        "precision20": 0.9949748743718593,
+        "mean_iou": 0.8597365740735633,
+        "success50": 1.0,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 25.03252099995734
+    },
+    {
+      "method": "bytetrack",
+      "trial": 2,
+      "frames": 200,
+      "wall_seconds": 10.54273254600048,
+      "cpu_one_core_pct": 73.8253834197156,
+      "temperature_start_c": 63.9,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 18.970413896715282,
+      "read_to_prediction_p50_ms": 52.82564150184044,
+      "read_to_prediction_p95_ms": 53.38197865166876,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 1,
+      "sequence": "uav0000137_00458_v",
+      "target": [
+        "car",
+        13
+      ],
+      "metrics": {
+        "auc": 0.9140942809284519,
+        "precision20": 1.0,
+        "mean_iou": 0.9353494107394918,
+        "success50": 1.0,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 24.582818015132943
+    },
+    {
+      "method": "holdfast",
+      "trial": 2,
+      "frames": 200,
+      "wall_seconds": 17.34707064199756,
+      "cpu_one_core_pct": 84.1492815776016,
+      "temperature_start_c": 63.35,
+      "temperature_end_c": 62.8,
+      "hardware_e2e_fps": 11.529324122067994,
+      "read_to_prediction_p50_ms": 86.47573000234843,
+      "read_to_prediction_p95_ms": 87.3996996502683,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000137_00458_v",
+      "target": [
+        "car",
+        13
+      ],
+      "metrics": {
+        "auc": 0.9136156975352957,
+        "precision20": 1.0,
+        "mean_iou": 0.9355952029369957,
+        "success50": 1.0,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 24.728778099924966
+    },
+    {
+      "method": "KCF",
+      "trial": 2,
+      "frames": 200,
+      "wall_seconds": 11.754606026999681,
+      "cpu_one_core_pct": 99.86539692641898,
+      "temperature_start_c": 62.8,
+      "temperature_end_c": 63.9,
+      "hardware_e2e_fps": 17.014606830770084,
+      "read_to_prediction_p50_ms": 59.0079904995946,
+      "read_to_prediction_p95_ms": 59.28894705066341,
+      "detection_calls": 1,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000137_00458_v",
+      "target": [
+        "car",
+        13
+      ],
+      "metrics": {
+        "auc": 0.8109595597032783,
+        "precision20": 0.9949748743718593,
+        "mean_iou": 0.8287126290730608,
+        "success50": 1.0,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 25.128411001787754
+    },
+    {
+      "method": "bytetrack",
+      "trial": 3,
+      "frames": 200,
+      "wall_seconds": 10.559032776000095,
+      "cpu_one_core_pct": 73.8768136768205,
+      "temperature_start_c": 64.45,
+      "temperature_end_c": 63.9,
+      "hardware_e2e_fps": 18.941128817649407,
+      "read_to_prediction_p50_ms": 52.89010600063193,
+      "read_to_prediction_p95_ms": 53.41874449659372,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 1,
+      "sequence": "uav0000137_00458_v",
+      "target": [
+        "car",
+        13
+      ],
+      "metrics": {
+        "auc": 0.9140942809284519,
+        "precision20": 1.0,
+        "mean_iou": 0.9353494107394918,
+        "success50": 1.0,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 24.583066329978465
+    },
+    {
+      "method": "holdfast",
+      "trial": 3,
+      "frames": 200,
+      "wall_seconds": 17.401426181000716,
+      "cpu_one_core_pct": 84.199079130636,
+      "temperature_start_c": 64.45,
+      "temperature_end_c": 63.9,
+      "hardware_e2e_fps": 11.493310830945838,
+      "read_to_prediction_p50_ms": 86.46252800099319,
+      "read_to_prediction_p95_ms": 89.89183289777426,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000137_00458_v",
+      "target": [
+        "car",
+        13
+      ],
+      "metrics": {
+        "auc": 0.9136156975352957,
+        "precision20": 1.0,
+        "mean_iou": 0.9355952029369957,
+        "success50": 1.0,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 24.70609849495304
+    },
+    {
+      "method": "KCF",
+      "trial": 3,
+      "frames": 200,
+      "wall_seconds": 11.762513489000412,
+      "cpu_one_core_pct": 99.84838564464054,
+      "temperature_start_c": 63.9,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 17.00316859887369,
+      "read_to_prediction_p50_ms": 59.06400050116645,
+      "read_to_prediction_p95_ms": 59.30775074921257,
+      "detection_calls": 1,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000137_00458_v",
+      "target": [
+        "car",
+        13
+      ],
+      "metrics": {
+        "auc": 0.8109595597032783,
+        "precision20": 0.9949748743718593,
+        "mean_iou": 0.8287126290730608,
+        "success50": 1.0,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 24.966854998638155
+    },
+    {
+      "method": "CSRT",
+      "trial": 3,
+      "frames": 200,
+      "wall_seconds": 23.195574935001787,
+      "cpu_one_core_pct": 99.92360283350843,
+      "temperature_start_c": 63.9,
+      "temperature_end_c": 66.65,
+      "hardware_e2e_fps": 8.622334240924673,
+      "read_to_prediction_p50_ms": 115.37600550036586,
+      "read_to_prediction_p95_ms": 119.24459804704384,
+      "detection_calls": 1,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000137_00458_v",
+      "target": [
+        "car",
+        13
+      ],
+      "metrics": {
+        "auc": 0.8435032304379039,
+        "precision20": 0.9949748743718593,
+        "mean_iou": 0.8597365740735633,
+        "success50": 1.0,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 25.072466996789444
+    },
+    {
+      "method": "KCF",
+      "trial": 1,
+      "frames": 184,
+      "wall_seconds": 5.565040050998505,
+      "cpu_one_core_pct": 93.73454033029027,
+      "temperature_start_c": 63.9,
+      "temperature_end_c": 63.9,
+      "hardware_e2e_fps": 33.06355359778334,
+      "read_to_prediction_p50_ms": 28.27422500013199,
+      "read_to_prediction_p95_ms": 34.02787764771347,
+      "detection_calls": 25,
+      "recovery_frames": 10,
+      "missing_outputs": 35,
+      "sequence": "uav0000305_00000_v",
+      "target": [
+        "car",
+        22
+      ],
+      "metrics": {
+        "auc": 0.5376008326827998,
+        "precision20": 0.7978142076502732,
+        "mean_iou": 0.5438391975014455,
+        "success50": 0.7704918032786885,
+        "scored": 183
+      },
+      "transitions": {
+        "DETECT->TRACK": 2,
+        "TRACK->RECOVER": 2,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 2
+      },
+      "severe_error_with_output_frames": 2,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.078322439541807
+    },
+    {
+      "method": "CSRT",
+      "trial": 1,
+      "frames": 184,
+      "wall_seconds": 12.327290830999118,
+      "cpu_one_core_pct": 99.87122434915547,
+      "temperature_start_c": 63.9,
+      "temperature_end_c": 63.9,
+      "hardware_e2e_fps": 14.926231766780417,
+      "read_to_prediction_p50_ms": 66.77341849899676,
+      "read_to_prediction_p95_ms": 68.12640835050843,
+      "detection_calls": 1,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000305_00000_v",
+      "target": [
+        "car",
+        22
+      ],
+      "metrics": {
+        "auc": 0.6424668227946917,
+        "precision20": 0.825136612021858,
+        "mean_iou": 0.6504693976241356,
+        "success50": 0.825136612021858,
+        "scored": 183
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 15,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.2853339985013
+    },
+    {
+      "method": "bytetrack",
+      "trial": 1,
+      "frames": 184,
+      "wall_seconds": 6.8292912090000755,
+      "cpu_one_core_pct": 62.99316988167921,
+      "temperature_start_c": 63.35,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 26.94276673361257,
+      "read_to_prediction_p50_ms": 37.03378299906035,
+      "read_to_prediction_p95_ms": 38.01115399746777,
+      "detection_calls": 184,
+      "recovery_frames": 3,
+      "missing_outputs": 4,
+      "sequence": "uav0000305_00000_v",
+      "target": [
+        "car",
+        22
+      ],
+      "metrics": {
+        "auc": 0.7678896695290139,
+        "precision20": 0.9836065573770492,
+        "mean_iou": 0.7823540061568112,
+        "success50": 0.9836065573770492,
+        "scored": 183
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 1,
+        "RECOVER->TRACK": 1,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 1,
+      "recovery_outputs_iou50": 1,
+      "detection_mean_ms": 23.249356163136248
+    },
+    {
+      "method": "holdfast",
+      "trial": 1,
+      "frames": 184,
+      "wall_seconds": 11.96489241600284,
+      "cpu_one_core_pct": 78.96414411853378,
+      "temperature_start_c": 63.35,
+      "temperature_end_c": 65.0,
+      "hardware_e2e_fps": 15.378324652038085,
+      "read_to_prediction_p50_ms": 64.01618100062478,
+      "read_to_prediction_p95_ms": 69.60666549839516,
+      "detection_calls": 184,
+      "recovery_frames": 4,
+      "missing_outputs": 16,
+      "sequence": "uav0000305_00000_v",
+      "target": [
+        "car",
+        22
+      ],
+      "metrics": {
+        "auc": 0.7192297684100962,
+        "precision20": 0.912568306010929,
+        "mean_iou": 0.7319891579429807,
+        "success50": 0.912568306010929,
+        "scored": 183
+      },
+      "transitions": {
+        "DETECT->TRACK": 2,
+        "TRACK->RECOVER": 1,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 1
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.432727913033254
+    },
+    {
+      "method": "CSRT",
+      "trial": 2,
+      "frames": 184,
+      "wall_seconds": 12.390524364996963,
+      "cpu_one_core_pct": 99.82458671355054,
+      "temperature_start_c": 65.55,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 14.850057558483732,
+      "read_to_prediction_p50_ms": 66.90730849913962,
+      "read_to_prediction_p95_ms": 68.3744531512275,
+      "detection_calls": 1,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000305_00000_v",
+      "target": [
+        "car",
+        22
+      ],
+      "metrics": {
+        "auc": 0.6424668227946917,
+        "precision20": 0.825136612021858,
+        "mean_iou": 0.6504693976241356,
+        "success50": 0.825136612021858,
+        "scored": 183
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 15,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.42225999746006
+    },
+    {
+      "method": "bytetrack",
+      "trial": 2,
+      "frames": 184,
+      "wall_seconds": 6.844463699999324,
+      "cpu_one_core_pct": 63.013232052066066,
+      "temperature_start_c": 63.35,
+      "temperature_end_c": 63.9,
+      "hardware_e2e_fps": 26.883041252745365,
+      "read_to_prediction_p50_ms": 36.99304250039859,
+      "read_to_prediction_p95_ms": 38.62211215109709,
+      "detection_calls": 184,
+      "recovery_frames": 3,
+      "missing_outputs": 4,
+      "sequence": "uav0000305_00000_v",
+      "target": [
+        "car",
+        22
+      ],
+      "metrics": {
+        "auc": 0.7678896695290139,
+        "precision20": 0.9836065573770492,
+        "mean_iou": 0.7823540061568112,
+        "success50": 0.9836065573770492,
+        "scored": 183
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 1,
+        "RECOVER->TRACK": 1,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 1,
+      "recovery_outputs_iou50": 1,
+      "detection_mean_ms": 23.28764257609968
+    },
+    {
+      "method": "holdfast",
+      "trial": 2,
+      "frames": 184,
+      "wall_seconds": 11.915046811998764,
+      "cpu_one_core_pct": 78.7649684141331,
+      "temperature_start_c": 63.35,
+      "temperature_end_c": 64.45,
+      "hardware_e2e_fps": 15.44265858986867,
+      "read_to_prediction_p50_ms": 63.9408299994102,
+      "read_to_prediction_p95_ms": 68.49742689792038,
+      "detection_calls": 184,
+      "recovery_frames": 4,
+      "missing_outputs": 16,
+      "sequence": "uav0000305_00000_v",
+      "target": [
+        "car",
+        22
+      ],
+      "metrics": {
+        "auc": 0.7192297684100962,
+        "precision20": 0.912568306010929,
+        "mean_iou": 0.7319891579429807,
+        "success50": 0.912568306010929,
+        "scored": 183
+      },
+      "transitions": {
+        "DETECT->TRACK": 2,
+        "TRACK->RECOVER": 1,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 1
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.33549385860786
+    },
+    {
+      "method": "KCF",
+      "trial": 2,
+      "frames": 184,
+      "wall_seconds": 5.432570457000111,
+      "cpu_one_core_pct": 93.6611376561828,
+      "temperature_start_c": 63.9,
+      "temperature_end_c": 62.8,
+      "hardware_e2e_fps": 33.869786219322336,
+      "read_to_prediction_p50_ms": 26.463768001121935,
+      "read_to_prediction_p95_ms": 34.546743347891606,
+      "detection_calls": 25,
+      "recovery_frames": 10,
+      "missing_outputs": 35,
+      "sequence": "uav0000305_00000_v",
+      "target": [
+        "car",
+        22
+      ],
+      "metrics": {
+        "auc": 0.5376008326827998,
+        "precision20": 0.7978142076502732,
+        "mean_iou": 0.5438391975014455,
+        "success50": 0.7704918032786885,
+        "scored": 183
+      },
+      "transitions": {
+        "DETECT->TRACK": 2,
+        "TRACK->RECOVER": 2,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 2
+      },
+      "severe_error_with_output_frames": 2,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.15126399989822
+    },
+    {
+      "method": "bytetrack",
+      "trial": 3,
+      "frames": 184,
+      "wall_seconds": 6.840051716000744,
+      "cpu_one_core_pct": 63.07749359419521,
+      "temperature_start_c": 63.35,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 26.900381406411576,
+      "read_to_prediction_p50_ms": 37.087042997882236,
+      "read_to_prediction_p95_ms": 37.743401450097736,
+      "detection_calls": 184,
+      "recovery_frames": 3,
+      "missing_outputs": 4,
+      "sequence": "uav0000305_00000_v",
+      "target": [
+        "car",
+        22
+      ],
+      "metrics": {
+        "auc": 0.7678896695290139,
+        "precision20": 0.9836065573770492,
+        "mean_iou": 0.7823540061568112,
+        "success50": 0.9836065573770492,
+        "scored": 183
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 1,
+        "RECOVER->TRACK": 1,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 1,
+      "recovery_outputs_iou50": 1,
+      "detection_mean_ms": 23.277840152312148
+    },
+    {
+      "method": "holdfast",
+      "trial": 3,
+      "frames": 184,
+      "wall_seconds": 11.902462075002404,
+      "cpu_one_core_pct": 78.744106975011,
+      "temperature_start_c": 63.9,
+      "temperature_end_c": 64.45,
+      "hardware_e2e_fps": 15.4589864551165,
+      "read_to_prediction_p50_ms": 63.89477499942586,
+      "read_to_prediction_p95_ms": 68.39222319922555,
+      "detection_calls": 184,
+      "recovery_frames": 4,
+      "missing_outputs": 16,
+      "sequence": "uav0000305_00000_v",
+      "target": [
+        "car",
+        22
+      ],
+      "metrics": {
+        "auc": 0.7192297684100962,
+        "precision20": 0.912568306010929,
+        "mean_iou": 0.7319891579429807,
+        "success50": 0.912568306010929,
+        "scored": 183
+      },
+      "transitions": {
+        "DETECT->TRACK": 2,
+        "TRACK->RECOVER": 1,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 1
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.364228190194293
+    },
+    {
+      "method": "KCF",
+      "trial": 3,
+      "frames": 184,
+      "wall_seconds": 5.385992764000548,
+      "cpu_one_core_pct": 93.60593556117685,
+      "temperature_start_c": 63.9,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 34.162689788563796,
+      "read_to_prediction_p50_ms": 26.47607349899772,
+      "read_to_prediction_p95_ms": 34.47797204989911,
+      "detection_calls": 25,
+      "recovery_frames": 10,
+      "missing_outputs": 35,
+      "sequence": "uav0000305_00000_v",
+      "target": [
+        "car",
+        22
+      ],
+      "metrics": {
+        "auc": 0.5376008326827998,
+        "precision20": 0.7978142076502732,
+        "mean_iou": 0.5438391975014455,
+        "success50": 0.7704918032786885,
+        "scored": 183
+      },
+      "transitions": {
+        "DETECT->TRACK": 2,
+        "TRACK->RECOVER": 2,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 2
+      },
+      "severe_error_with_output_frames": 2,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.19675255988841
+    },
+    {
+      "method": "CSRT",
+      "trial": 3,
+      "frames": 184,
+      "wall_seconds": 12.325790970000526,
+      "cpu_one_core_pct": 99.87104243419982,
+      "temperature_start_c": 62.8,
+      "temperature_end_c": 66.65,
+      "hardware_e2e_fps": 14.928048061810685,
+      "read_to_prediction_p50_ms": 66.79705100032152,
+      "read_to_prediction_p95_ms": 68.05581755052117,
+      "detection_calls": 1,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000305_00000_v",
+      "target": [
+        "car",
+        22
+      ],
+      "metrics": {
+        "auc": 0.6424668227946917,
+        "precision20": 0.825136612021858,
+        "mean_iou": 0.6504693976241356,
+        "success50": 0.825136612021858,
+        "scored": 183
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 15,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.514446002081968
+    },
+    {
+      "method": "KCF",
+      "trial": 1,
+      "frames": 200,
+      "wall_seconds": 5.84511015300086,
+      "cpu_one_core_pct": 74.62507476887507,
+      "temperature_start_c": 63.35,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 34.21663489050256,
+      "read_to_prediction_p50_ms": 24.54745749855647,
+      "read_to_prediction_p95_ms": 40.25751925037181,
+      "detection_calls": 72,
+      "recovery_frames": 15,
+      "missing_outputs": 87,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "pedestrian",
+        17
+      ],
+      "metrics": {
+        "auc": 0.4541756401052883,
+        "precision20": 0.5527638190954773,
+        "mean_iou": 0.46256327665593766,
+        "success50": 0.5527638190954773,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 3,
+        "TRACK->RECOVER": 3,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 3
+      },
+      "severe_error_with_output_frames": 2,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 22.943472860940044
+    },
+    {
+      "method": "CSRT",
+      "trial": 1,
+      "frames": 200,
+      "wall_seconds": 13.60832689200106,
+      "cpu_one_core_pct": 99.88052434270507,
+      "temperature_start_c": 63.35,
+      "temperature_end_c": 65.0,
+      "hardware_e2e_fps": 14.696883870239736,
+      "read_to_prediction_p50_ms": 67.99442450210336,
+      "read_to_prediction_p95_ms": 68.7331481021829,
+      "detection_calls": 1,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "pedestrian",
+        17
+      ],
+      "metrics": {
+        "auc": 0.5680784876764776,
+        "precision20": 0.8844221105527639,
+        "mean_iou": 0.5709463237324315,
+        "success50": 0.6180904522613065,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.06142700035707
+    },
+    {
+      "method": "bytetrack",
+      "trial": 1,
+      "frames": 200,
+      "wall_seconds": 7.0990681139992375,
+      "cpu_one_core_pct": 61.35654293005798,
+      "temperature_start_c": 64.45,
+      "temperature_end_c": 63.9,
+      "hardware_e2e_fps": 28.172711796581233,
+      "read_to_prediction_p50_ms": 35.56467849921319,
+      "read_to_prediction_p95_ms": 35.930713301604555,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 1,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "pedestrian",
+        17
+      ],
+      "metrics": {
+        "auc": 0.6365159128978225,
+        "precision20": 0.949748743718593,
+        "mean_iou": 0.644533842374924,
+        "success50": 0.7185929648241206,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.064390424860903
+    },
+    {
+      "method": "holdfast",
+      "trial": 1,
+      "frames": 200,
+      "wall_seconds": 12.630655253000441,
+      "cpu_one_core_pct": 78.2833773065824,
+      "temperature_start_c": 62.8,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 15.834491243238512,
+      "read_to_prediction_p50_ms": 62.76433800121595,
+      "read_to_prediction_p95_ms": 64.81650235054984,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "pedestrian",
+        17
+      ],
+      "metrics": {
+        "auc": 0.6422589136156974,
+        "precision20": 0.9547738693467337,
+        "mean_iou": 0.648752167020129,
+        "success50": 0.7437185929648241,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.178638729896193
+    },
+    {
+      "method": "CSRT",
+      "trial": 2,
+      "frames": 200,
+      "wall_seconds": 13.743200852997688,
+      "cpu_one_core_pct": 99.88369271344673,
+      "temperature_start_c": 62.8,
+      "temperature_end_c": 64.45,
+      "hardware_e2e_fps": 14.552650589864275,
+      "read_to_prediction_p50_ms": 68.31034249807999,
+      "read_to_prediction_p95_ms": 71.5874346500641,
+      "detection_calls": 1,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "pedestrian",
+        17
+      ],
+      "metrics": {
+        "auc": 0.5680784876764776,
+        "precision20": 0.8844221105527639,
+        "mean_iou": 0.5709463237324315,
+        "success50": 0.6180904522613065,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.201983000035398
+    },
+    {
+      "method": "bytetrack",
+      "trial": 2,
+      "frames": 200,
+      "wall_seconds": 7.178065733998665,
+      "cpu_one_core_pct": 61.660371540431804,
+      "temperature_start_c": 64.45,
+      "temperature_end_c": 62.8,
+      "hardware_e2e_fps": 27.86265930286857,
+      "read_to_prediction_p50_ms": 35.53410550011904,
+      "read_to_prediction_p95_ms": 40.97078909944685,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 1,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "pedestrian",
+        17
+      ],
+      "metrics": {
+        "auc": 0.6365159128978225,
+        "precision20": 0.949748743718593,
+        "mean_iou": 0.644533842374924,
+        "success50": 0.7185929648241206,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.182386359967495
+    },
+    {
+      "method": "holdfast",
+      "trial": 2,
+      "frames": 200,
+      "wall_seconds": 12.614905198999622,
+      "cpu_one_core_pct": 78.06129417271327,
+      "temperature_start_c": 63.9,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 15.85426103843097,
+      "read_to_prediction_p50_ms": 62.68646800162969,
+      "read_to_prediction_p95_ms": 64.79522834852104,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "pedestrian",
+        17
+      ],
+      "metrics": {
+        "auc": 0.6422589136156974,
+        "precision20": 0.9547738693467337,
+        "mean_iou": 0.648752167020129,
+        "success50": 0.7437185929648241,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.201283004927973
+    },
+    {
+      "method": "KCF",
+      "trial": 2,
+      "frames": 200,
+      "wall_seconds": 5.391618810001091,
+      "cpu_one_core_pct": 81.65677447065495,
+      "temperature_start_c": 63.35,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 37.09461055166093,
+      "read_to_prediction_p50_ms": 21.3907655015646,
+      "read_to_prediction_p95_ms": 35.043700301503044,
+      "detection_calls": 72,
+      "recovery_frames": 15,
+      "missing_outputs": 87,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "pedestrian",
+        17
+      ],
+      "metrics": {
+        "auc": 0.4541756401052883,
+        "precision20": 0.5527638190954773,
+        "mean_iou": 0.46256327665593766,
+        "success50": 0.5527638190954773,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 3,
+        "TRACK->RECOVER": 3,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 3
+      },
+      "severe_error_with_output_frames": 2,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.094365958665247
+    },
+    {
+      "method": "bytetrack",
+      "trial": 3,
+      "frames": 200,
+      "wall_seconds": 7.203295685001649,
+      "cpu_one_core_pct": 61.86515354740686,
+      "temperature_start_c": 62.8,
+      "temperature_end_c": 63.9,
+      "hardware_e2e_fps": 27.76506876101591,
+      "read_to_prediction_p50_ms": 35.63628200026869,
+      "read_to_prediction_p95_ms": 40.76203874719795,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 1,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "pedestrian",
+        17
+      ],
+      "metrics": {
+        "auc": 0.6365159128978225,
+        "precision20": 0.949748743718593,
+        "mean_iou": 0.644533842374924,
+        "success50": 0.7185929648241206,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.26004764996469
+    },
+    {
+      "method": "holdfast",
+      "trial": 3,
+      "frames": 200,
+      "wall_seconds": 12.571556242000952,
+      "cpu_one_core_pct": 78.09212793560563,
+      "temperature_start_c": 62.8,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 15.908929344149916,
+      "read_to_prediction_p50_ms": 62.555894000979606,
+      "read_to_prediction_p95_ms": 64.13817854991066,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "pedestrian",
+        17
+      ],
+      "metrics": {
+        "auc": 0.6422589136156974,
+        "precision20": 0.9547738693467337,
+        "mean_iou": 0.648752167020129,
+        "success50": 0.7437185929648241,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.15927477009609
+    },
+    {
+      "method": "KCF",
+      "trial": 3,
+      "frames": 200,
+      "wall_seconds": 5.3391410909971455,
+      "cpu_one_core_pct": 81.43028614342212,
+      "temperature_start_c": 63.35,
+      "temperature_end_c": 63.9,
+      "hardware_e2e_fps": 37.45920862388143,
+      "read_to_prediction_p50_ms": 21.272672500344925,
+      "read_to_prediction_p95_ms": 34.562700800051964,
+      "detection_calls": 72,
+      "recovery_frames": 15,
+      "missing_outputs": 87,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "pedestrian",
+        17
+      ],
+      "metrics": {
+        "auc": 0.4541756401052883,
+        "precision20": 0.5527638190954773,
+        "mean_iou": 0.46256327665593766,
+        "success50": 0.5527638190954773,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 3,
+        "TRACK->RECOVER": 3,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 3
+      },
+      "severe_error_with_output_frames": 2,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.01246211093005
+    },
+    {
+      "method": "CSRT",
+      "trial": 3,
+      "frames": 200,
+      "wall_seconds": 13.7595714329982,
+      "cpu_one_core_pct": 99.81186150946444,
+      "temperature_start_c": 62.25,
+      "temperature_end_c": 65.0,
+      "hardware_e2e_fps": 14.535336436450343,
+      "read_to_prediction_p50_ms": 68.5491499989439,
+      "read_to_prediction_p95_ms": 69.72615410195431,
+      "detection_calls": 1,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "pedestrian",
+        17
+      ],
+      "metrics": {
+        "auc": 0.5680784876764776,
+        "precision20": 0.8844221105527639,
+        "mean_iou": 0.5709463237324315,
+        "success50": 0.6180904522613065,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.335371999564813
+    },
+    {
+      "method": "KCF",
+      "trial": 1,
+      "frames": 200,
+      "wall_seconds": 5.421589194000262,
+      "cpu_one_core_pct": 99.47076322138139,
+      "temperature_start_c": 63.35,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 36.88955264654276,
+      "read_to_prediction_p50_ms": 26.94308499849285,
+      "read_to_prediction_p95_ms": 27.17849609980476,
+      "detection_calls": 2,
+      "recovery_frames": 5,
+      "missing_outputs": 6,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "car",
+        5
+      ],
+      "metrics": {
+        "auc": 0.6850921273031826,
+        "precision20": 0.9296482412060302,
+        "mean_iou": 0.6942698995592309,
+        "success50": 0.9296482412060302,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 2,
+        "TRACK->RECOVER": 1,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 1
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.285890498300432
+    },
+    {
+      "method": "CSRT",
+      "trial": 1,
+      "frames": 200,
+      "wall_seconds": 12.685449436001363,
+      "cpu_one_core_pct": 99.87267330114828,
+      "temperature_start_c": 63.35,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 15.76609492702711,
+      "read_to_prediction_p50_ms": 63.39952649977931,
+      "read_to_prediction_p95_ms": 64.34867149982892,
+      "detection_calls": 1,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "car",
+        5
+      ],
+      "metrics": {
+        "auc": 0.45393634840871017,
+        "precision20": 0.7939698492462312,
+        "mean_iou": 0.4497905862948111,
+        "success50": 0.3015075376884422,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.124352999730036
+    },
+    {
+      "method": "bytetrack",
+      "trial": 1,
+      "frames": 200,
+      "wall_seconds": 7.132149868000852,
+      "cpu_one_core_pct": 61.45720425289687,
+      "temperature_start_c": 64.45,
+      "temperature_end_c": 62.8,
+      "hardware_e2e_fps": 28.04203552947215,
+      "read_to_prediction_p50_ms": 35.723032498935936,
+      "read_to_prediction_p95_ms": 36.17197619732906,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 1,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "car",
+        5
+      ],
+      "metrics": {
+        "auc": 0.826992103374013,
+        "precision20": 0.9547738693467337,
+        "mean_iou": 0.8423925839499968,
+        "success50": 0.964824120603015,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.181905280143837
+    },
+    {
+      "method": "holdfast",
+      "trial": 1,
+      "frames": 200,
+      "wall_seconds": 12.637930608001625,
+      "cpu_one_core_pct": 78.26547256666758,
+      "temperature_start_c": 62.8,
+      "temperature_end_c": 63.9,
+      "hardware_e2e_fps": 15.825375704577084,
+      "read_to_prediction_p50_ms": 62.92187800136162,
+      "read_to_prediction_p95_ms": 64.54940319999878,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "car",
+        5
+      ],
+      "metrics": {
+        "auc": 0.8286671452500597,
+        "precision20": 0.9547738693467337,
+        "mean_iou": 0.842327015265891,
+        "success50": 0.964824120603015,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.273373790107144
+    },
+    {
+      "method": "CSRT",
+      "trial": 2,
+      "frames": 200,
+      "wall_seconds": 12.710183605999191,
+      "cpu_one_core_pct": 99.87285200198393,
+      "temperature_start_c": 63.9,
+      "temperature_end_c": 65.0,
+      "hardware_e2e_fps": 15.735413916884745,
+      "read_to_prediction_p50_ms": 63.25486050081963,
+      "read_to_prediction_p95_ms": 64.99366350089986,
+      "detection_calls": 1,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "car",
+        5
+      ],
+      "metrics": {
+        "auc": 0.45393634840871017,
+        "precision20": 0.7939698492462312,
+        "mean_iou": 0.4497905862948111,
+        "success50": 0.3015075376884422,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.13285400305176
+    },
+    {
+      "method": "bytetrack",
+      "trial": 2,
+      "frames": 200,
+      "wall_seconds": 7.248473010000453,
+      "cpu_one_core_pct": 62.30211233137664,
+      "temperature_start_c": 63.9,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 27.592018308417142,
+      "read_to_prediction_p50_ms": 35.703644000022905,
+      "read_to_prediction_p95_ms": 41.32813585038093,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 1,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "car",
+        5
+      ],
+      "metrics": {
+        "auc": 0.826992103374013,
+        "precision20": 0.9547738693467337,
+        "mean_iou": 0.8423925839499968,
+        "success50": 0.964824120603015,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.37430483486969
+    },
+    {
+      "method": "holdfast",
+      "trial": 2,
+      "frames": 200,
+      "wall_seconds": 12.620931021003344,
+      "cpu_one_core_pct": 78.23542083042801,
+      "temperature_start_c": 63.35,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 15.846691473645366,
+      "read_to_prediction_p50_ms": 62.857701999746496,
+      "read_to_prediction_p95_ms": 64.50067675123137,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "car",
+        5
+      ],
+      "metrics": {
+        "auc": 0.8286671452500597,
+        "precision20": 0.9547738693467337,
+        "mean_iou": 0.842327015265891,
+        "success50": 0.964824120603015,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.29321577986775
+    },
+    {
+      "method": "KCF",
+      "trial": 2,
+      "frames": 200,
+      "wall_seconds": 5.450526419997914,
+      "cpu_one_core_pct": 99.47839256601702,
+      "temperature_start_c": 63.35,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 36.69370343132408,
+      "read_to_prediction_p50_ms": 26.972252499035676,
+      "read_to_prediction_p95_ms": 33.10323645182506,
+      "detection_calls": 2,
+      "recovery_frames": 5,
+      "missing_outputs": 6,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "car",
+        5
+      ],
+      "metrics": {
+        "auc": 0.6850921273031826,
+        "precision20": 0.9296482412060302,
+        "mean_iou": 0.6942698995592309,
+        "success50": 0.9296482412060302,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 2,
+        "TRACK->RECOVER": 1,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 1
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.2714744979603
+    },
+    {
+      "method": "bytetrack",
+      "trial": 3,
+      "frames": 200,
+      "wall_seconds": 7.2444766929984326,
+      "cpu_one_core_pct": 62.0942251128722,
+      "temperature_start_c": 63.9,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 27.607239069910175,
+      "read_to_prediction_p50_ms": 35.91226500066114,
+      "read_to_prediction_p95_ms": 39.88404739975522,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 1,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "car",
+        5
+      ],
+      "metrics": {
+        "auc": 0.826992103374013,
+        "precision20": 0.9547738693467337,
+        "mean_iou": 0.8423925839499968,
+        "success50": 0.964824120603015,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.501745415178448
+    },
+    {
+      "method": "holdfast",
+      "trial": 3,
+      "frames": 200,
+      "wall_seconds": 12.676414104000287,
+      "cpu_one_core_pct": 78.3181826938507,
+      "temperature_start_c": 62.8,
+      "temperature_end_c": 62.8,
+      "hardware_e2e_fps": 15.777332482132005,
+      "read_to_prediction_p50_ms": 63.11848949917476,
+      "read_to_prediction_p95_ms": 65.21640915107128,
+      "detection_calls": 200,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "car",
+        5
+      ],
+      "metrics": {
+        "auc": 0.8286671452500597,
+        "precision20": 0.9547738693467337,
+        "mean_iou": 0.842327015265891,
+        "success50": 0.964824120603015,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.461498170017876
+    },
+    {
+      "method": "KCF",
+      "trial": 3,
+      "frames": 200,
+      "wall_seconds": 5.429995549002342,
+      "cpu_one_core_pct": 99.4672424177648,
+      "temperature_start_c": 63.35,
+      "temperature_end_c": 63.35,
+      "hardware_e2e_fps": 36.83244271475437,
+      "read_to_prediction_p50_ms": 27.00510449903959,
+      "read_to_prediction_p95_ms": 27.210847351489065,
+      "detection_calls": 2,
+      "recovery_frames": 5,
+      "missing_outputs": 6,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "car",
+        5
+      ],
+      "metrics": {
+        "auc": 0.6850921273031826,
+        "precision20": 0.9296482412060302,
+        "mean_iou": 0.6942698995592309,
+        "success50": 0.9296482412060302,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 2,
+        "TRACK->RECOVER": 1,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 1
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.43532649865665
+    },
+    {
+      "method": "CSRT",
+      "trial": 3,
+      "frames": 200,
+      "wall_seconds": 12.725654834001034,
+      "cpu_one_core_pct": 99.86688450832585,
+      "temperature_start_c": 63.9,
+      "temperature_end_c": 63.9,
+      "hardware_e2e_fps": 15.716283571170743,
+      "read_to_prediction_p50_ms": 63.7592789989867,
+      "read_to_prediction_p95_ms": 64.76463195122051,
+      "detection_calls": 1,
+      "recovery_frames": 0,
+      "missing_outputs": 0,
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "car",
+        5
+      ],
+      "metrics": {
+        "auc": 0.45393634840871017,
+        "precision20": 0.7939698492462312,
+        "mean_iou": 0.4497905862948111,
+        "success50": 0.3015075376884422,
+        "scored": 199
+      },
+      "transitions": {
+        "DETECT->TRACK": 1,
+        "TRACK->RECOVER": 0,
+        "RECOVER->TRACK": 0,
+        "RECOVER->DETECT": 0
+      },
+      "severe_error_with_output_frames": 0,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "detection_mean_ms": 23.438262000126997
+    }
+  ],
+  "aggregate": [
+    {
+      "method": "KCF",
+      "targets": 5,
+      "trials_per_target": 3,
+      "pooled_fps": 30.020642247915262,
+      "run_fps_min": 17.00316859887369,
+      "run_fps_max": 43.62268097163046,
+      "pooled_latency_p50_ms": 26.968520500304294,
+      "pooled_latency_p95_ms": 59.30552485078806,
+      "auc": 0.5006764240144254,
+      "precision20": 0.6580553038416124,
+      "missing_fraction": 0.17886178861788618,
+      "cpu_one_core_pct": 93.89679093218288,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "severe_error_with_output_frames": 453
+    },
+    {
+      "method": "CSRT",
+      "targets": 5,
+      "trials_per_target": 3,
+      "pooled_fps": 12.502217161593181,
+      "run_fps_min": 8.622334240924673,
+      "run_fps_max": 15.76609492702711,
+      "pooled_latency_p50_ms": 68.38503750077507,
+      "pooled_latency_p95_ms": 116.29868429808994,
+      "auc": 0.530981998203351,
+      "precision20": 0.7469368701430651,
+      "missing_fraction": 0.0,
+      "cpu_one_core_pct": 99.87280002508695,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "severe_error_with_output_frames": 435
+    },
+    {
+      "method": "bytetrack",
+      "targets": 5,
+      "trials_per_target": 3,
+      "pooled_fps": 25.7371301481643,
+      "run_fps_min": 18.91119413618498,
+      "run_fps_max": 31.10631846177691,
+      "pooled_latency_p50_ms": 35.87288400012767,
+      "pooled_latency_p95_ms": 53.102434299944434,
+      "auc": 0.7706633610414811,
+      "precision20": 0.9776258340884755,
+      "missing_fraction": 0.008130081300813009,
+      "cpu_one_core_pct": 63.60158902151748,
+      "recovery_outputs": 3,
+      "recovery_outputs_iou50": 3,
+      "severe_error_with_output_frames": 0
+    },
+    {
+      "method": "holdfast",
+      "targets": 5,
+      "trials_per_target": 3,
+      "pooled_fps": 15.067110153420169,
+      "run_fps_min": 11.493310830945838,
+      "run_fps_max": 18.648194580912065,
+      "pooled_latency_p50_ms": 63.4227299997292,
+      "pooled_latency_p95_ms": 86.97752645148285,
+      "auc": 0.7552840967784539,
+      "precision20": 0.9553779828102263,
+      "missing_fraction": 0.02540650406504065,
+      "cpu_one_core_pct": 78.77328133978314,
+      "recovery_outputs": 0,
+      "recovery_outputs_iou50": 0,
+      "severe_error_with_output_frames": 0
+    }
+  ],
+  "detector": {
+    "name": "RemDet-S",
+    "hef_sha256": "fb5d9dac6191aedfa39a730a703feb62d21fc151951ae6d1420f34a9fbb93beb",
+    "confidence": 0.05,
+    "input_size": [
+      640,
+      640
+    ],
+    "warmup_inferences": 5
+  },
+  "environment": {
+    "platform": "Linux-6.18.50+rpt-rpi-2712-aarch64-with-glibc2.41",
+    "board": "Raspberry Pi 5 Model B Rev 1.0",
+    "observation": "Spot check during five-target hardware suite; not continuous telemetry",
+    "throttle": "throttled=0x0",
+    "temperature": "temp=65.3'C",
+    "cpu_clock": "frequency(0)=2400030464"
+  },
+  "opencv": "4.10.0"
+}

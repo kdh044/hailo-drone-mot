@@ -54,6 +54,14 @@ class Engine:
             self.joint=JointTracker('rf-bytetrack' if method=='bytetrack' else 'holdfast')
             self.step=step
 
+    def select_target(self,box=None):
+        """Explicit user target change returns to detection before new tracking."""
+        self.selection=box
+        self.box=self.template=self.track_id=self.tracker=None
+        self.selected_class=None
+        self.retries=0
+        self.state="DETECT"
+
     def initialize(self,img,box):
         self.tracker=getattr(cv2,f'Tracker{self.method}_create')()
         self.tracker.init(img,box)
@@ -137,6 +145,7 @@ def main():
     p.add_argument('source',type=Path,help='Same original JPEG directory for all methods')
     p.add_argument('--hef',type=Path,default=ROOT/'models/remdet_s_visdrone.hef')
     p.add_argument('--methods',nargs='+',default=['KCF','CSRT','bytetrack','holdfast'],choices=['KCF','CSRT','bytetrack','holdfast'])
+    p.add_argument('--start-frame',type=int,default=1)
     p.add_argument('--frames',type=int,default=200)
     p.add_argument('--trials',type=int,default=3)
     p.add_argument('--recovery-frames',type=int,default=5)
@@ -153,7 +162,7 @@ def main():
         p.exit(2,'Hailo device /dev/hailo0 is not visible. No hardware speed result was produced. Run this command in the Pi host terminal.\n')
     if a.mot_site_packages:
         sys.path.append(str(a.mot_site_packages))
-    files=sorted(a.source.glob('*.jpg'))[:a.frames]
+    files=[f for f in sorted(a.source.glob('*.jpg')) if int(f.stem)>=a.start_frame][:a.frames]
     if not files:
         p.error('no JPEG inputs found')
     if any(m in ('KCF','CSRT') and not hasattr(cv2,f'Tracker{m}_create') for m in a.methods):
@@ -188,6 +197,9 @@ def main():
             for method in order:
                 engine=Engine(method,a.recovery_frames,a.selection_box)
                 events=[]
+                cpu_start=time.process_time()
+                thermal=Path("/sys/class/thermal/thermal_zone0/temp")
+                temp_start=float(thermal.read_text())/1000 if thermal.exists() else None
                 wall=time.perf_counter()
                 for path in files:
                     start=time.perf_counter()
@@ -206,8 +218,11 @@ def main():
                         read_to_prediction_ms=(end-start)*1000)
                     events.append(event)
                 elapsed=time.perf_counter()-wall
+                cpu_seconds=time.process_time()-cpu_start
                 latency=np.array([r['read_to_prediction_ms'] for r in events])
                 result=dict(method=method,trial=trial+1,frames=len(events),wall_seconds=elapsed,
+                    cpu_one_core_pct=100*cpu_seconds/elapsed,
+                    temperature_start_c=temp_start,temperature_end_c=float(thermal.read_text())/1000 if thermal.exists() else None,
                     hardware_e2e_fps=len(events)/elapsed if not a.cached_detections else None,
                     read_to_prediction_p50_ms=float(np.percentile(latency,50)),read_to_prediction_p95_ms=float(np.percentile(latency,95)),
                     detection_calls=sum(e['detector_called'] for e in events),
