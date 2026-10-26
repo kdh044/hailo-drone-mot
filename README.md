@@ -133,5 +133,7 @@ python mot/make_pipeline_table.py                                               
 
 ## 참고
 
+- SOT 비교: [KCF·CSRT 원본/ROI와 기존 MOT 비교](sot/README.md). 표준 SOT 지표로 채점한 VisDrone 기반 예비 실험이며, 공식 UAV123 결과와는 구분합니다.
+
 - `mot/ext/` 아래 트래커는 각 원저자의 공개 구현을 어댑터용으로 고친 것이며, 원래 저장소의 라이선스를 따릅니다.
 - 정성 비교 그림: [ByteTrack vs Holdfast](docs/assets/bytetrack_vs_holdfast.png), [RemDet-S 검출 예시](docs/assets/remdet_s_det.jpg)

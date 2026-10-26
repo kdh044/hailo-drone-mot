@@ -1,0 +1,232 @@
+{
+  "ostrack_export_probe": {
+    "model": "OSTrack-384",
+    "checkpoint_source": "official OSTrack README-linked ModelScope damo/cv_vitb_video-single-object-tracking_ostrack",
+    "checkpoint_sha256": "8e6de3c6f10cbc21eaf1c34532358e23618f78a1a2bb9f0d9a2e55adc7af4894",
+    "upstream_commit": "33b5e12586216b7fd0e95d255bd01ba44cbec759",
+    "architecture": "aarch64",
+    "torch": "2.14.1+cpu",
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.0",
+    "pretrained_weights_loaded_strictly": true,
+    "candidate_elimination_preserved": true,
+    "template_shape": [
+      1,
+      3,
+      192,
+      192
+    ],
+    "search_shape": [
+      1,
+      3,
+      384,
+      384
+    ],
+    "output_shapes": [
+      [
+        1,
+        1,
+        24,
+        24
+      ],
+      [
+        1,
+        2,
+        24,
+        24
+      ],
+      [
+        1,
+        2,
+        24,
+        24
+      ]
+    ],
+    "cpu_single_forward_ms": 4024.7652100006235,
+    "export_seconds": 7.522589345000597,
+    "onnx_checker": "passed",
+    "onnxruntime_comparison": "passed",
+    "max_abs_errors": [
+      7.82310962677002e-07,
+      4.410743713378906e-06,
+      5.185604095458984e-06
+    ],
+    "operator_counts": {
+      "Conv": 17,
+      "Shape": 53,
+      "Constant": 377,
+      "Slice": 23,
+      "Concat": 34,
+      "Reshape": 35,
+      "Transpose": 42,
+      "Add": 86,
+      "ConstantOfShape": 10,
+      "Expand": 8,
+      "Tile": 1,
+      "LayerNormalization": 25,
+      "MatMul": 72,
+      "Split": 12,
+      "Squeeze": 36,
+      "Mul": 43,
+      "Softmax": 12,
+      "Div": 20,
+      "Erf": 12,
+      "Equal": 7,
+      "Where": 7,
+      "NonZero": 3,
+      "GatherND": 3,
+      "ReduceMean": 6,
+      "Gather": 45,
+      "TopK": 3,
+      "GatherElements": 9,
+      "Unsqueeze": 71,
+      "Cast": 17,
+      "Sub": 3,
+      "ScatterElements": 1,
+      "Relu": 12,
+      "Sigmoid": 2,
+      "Clip": 2
+    },
+    "operators_to_review_for_hailo": {
+      "MatMul": 72,
+      "Softmax": 12,
+      "LayerNormalization": 25,
+      "TopK": 3,
+      "GatherElements": 9,
+      "ScatterElements": 1,
+      "NonZero": 3,
+      "GatherND": 3
+    },
+    "hailo_dfc_available": false,
+    "hailo_parse": "not_run",
+    "quantization_calibration": "not_run",
+    "hef_compilation": "not_run",
+    "accuracy_evaluation": "not_run; random tensors used only for numeric export verification"
+  },
+  "ostrack_noce_export_probe": {
+    "model": "OSTrack-384",
+    "checkpoint_source": "official OSTrack README-linked ModelScope damo/cv_vitb_video-single-object-tracking_ostrack",
+    "checkpoint_sha256": "8e6de3c6f10cbc21eaf1c34532358e23618f78a1a2bb9f0d9a2e55adc7af4894",
+    "upstream_commit": "33b5e12586216b7fd0e95d255bd01ba44cbec759",
+    "architecture": "aarch64",
+    "torch": "2.14.1+cpu",
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.0",
+    "pretrained_weights_loaded_strictly": true,
+    "candidate_elimination_preserved": false,
+    "template_shape": [
+      1,
+      3,
+      192,
+      192
+    ],
+    "search_shape": [
+      1,
+      3,
+      384,
+      384
+    ],
+    "output_shapes": [
+      [
+        1,
+        1,
+        24,
+        24
+      ],
+      [
+        1,
+        2,
+        24,
+        24
+      ],
+      [
+        1,
+        2,
+        24,
+        24
+      ]
+    ],
+    "cpu_single_forward_ms": 5701.531237000381,
+    "export_seconds": 8.927441091000219,
+    "onnx_checker": "passed",
+    "onnxruntime_comparison": "passed",
+    "max_abs_errors": [
+      8.791685104370117e-07,
+      7.092952728271484e-06,
+      6.9141387939453125e-06
+    ],
+    "operator_counts": {
+      "Conv": 17,
+      "Shape": 2,
+      "Constant": 146,
+      "Slice": 5,
+      "Concat": 4,
+      "Reshape": 27,
+      "Transpose": 39,
+      "Add": 86,
+      "LayerNormalization": 25,
+      "MatMul": 72,
+      "Split": 12,
+      "Squeeze": 36,
+      "Mul": 36,
+      "Softmax": 12,
+      "Div": 12,
+      "Erf": 12,
+      "Unsqueeze": 1,
+      "Relu": 12,
+      "Sigmoid": 2,
+      "Clip": 2
+    },
+    "operators_to_review_for_hailo": {
+      "MatMul": 72,
+      "Softmax": 12,
+      "LayerNormalization": 25
+    },
+    "hailo_dfc_available": false,
+    "hailo_parse": "not_run",
+    "quantization_calibration": "not_run",
+    "hef_compilation": "not_run",
+    "accuracy_evaluation": "not_run; random tensors used only for numeric export verification"
+  },
+  "ostrack_hailo_original_parse": {
+    "model": "ostrack_384_maps.onnx",
+    "architecture": "x86_64",
+    "dfc": "3.34.0",
+    "target": "hailo8",
+    "stage": "parse_only",
+    "calibration": "not_run",
+    "quantization": "not_run",
+    "compilation": "not_run",
+    "parse": "failed",
+    "error_type": "TypeError",
+    "error": "'NoneType' object is not subscriptable",
+    "elapsed_seconds": 42.64175560697913
+  },
+  "ostrack_hailo_simplified_parse": {
+    "model": "ostrack_384_maps_sim.onnx",
+    "architecture": "x86_64",
+    "dfc": "3.34.0",
+    "target": "hailo8",
+    "stage": "parse_only",
+    "calibration": "not_run",
+    "quantization": "not_run",
+    "compilation": "not_run",
+    "parse": "failed",
+    "error_type": "TypeError",
+    "error": "'NoneType' object is not subscriptable",
+    "elapsed_seconds": 9.509279419027735
+  },
+  "ostrack_hailo_noce_parse": {
+    "model": "ostrack_384_noce_maps.onnx",
+    "architecture": "x86_64",
+    "dfc": "3.34.0",
+    "target": "hailo8",
+    "stage": "parse_only",
+    "calibration": "not_run",
+    "quantization": "not_run",
+    "compilation": "not_run",
+    "parse": "passed",
+    "har": "ostrack_384_noce_maps.har",
+    "elapsed_seconds": 10.20124665601179
+  }
+}

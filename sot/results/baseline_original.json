@@ -1,0 +1,88 @@
+{
+  "opencv": "4.10.0",
+  "threads": 1,
+  "width": 0,
+  "protocol": "VisDrone-derived SOT; first GT init only; no resets; decode+resize included in E2E",
+  "results": [
+    {
+      "sequence": "uav0000086_00000_v",
+      "target": [
+        "pedestrian",
+        11
+      ],
+      "tracker": "KCF",
+      "frames": 80,
+      "scored_updates": 79,
+      "init_ms": 0.4683900006057229,
+      "update_fps": 213.00226490107016,
+      "successful_update_fps": 105.23988049414723,
+      "p95_update_ms": 5.8606418993804255,
+      "e2e_fps": 87.23694746696214,
+      "cpu_one_core_pct": 99.98236396058974,
+      "reported_success_fraction": 0.05063291139240506,
+      "mean_iou": 0.04056543074516926,
+      "success_iou_50": 0.05063291139240506,
+      "precision_20px_original": 0.05063291139240506
+    },
+    {
+      "sequence": "uav0000086_00000_v",
+      "target": [
+        "pedestrian",
+        11
+      ],
+      "tracker": "CSRT",
+      "frames": 80,
+      "scored_updates": 79,
+      "init_ms": 44.08073000013246,
+      "update_fps": 17.967023356239448,
+      "successful_update_fps": 17.967023356239448,
+      "p95_update_ms": 56.08141570037333,
+      "e2e_fps": 16.10937199398778,
+      "cpu_one_core_pct": 99.98533207447369,
+      "reported_success_fraction": 1.0,
+      "mean_iou": 0.3612865466035833,
+      "success_iou_50": 0.31645569620253167,
+      "precision_20px_original": 0.4177215189873418
+    },
+    {
+      "sequence": "uav0000117_02622_v",
+      "target": [
+        "pedestrian",
+        0
+      ],
+      "tracker": "KCF",
+      "frames": 80,
+      "scored_updates": 79,
+      "init_ms": 0.6430749999708496,
+      "update_fps": 125.04804634788184,
+      "successful_update_fps": 108.63011987412459,
+      "p95_update_ms": 8.106163199954608,
+      "e2e_fps": 31.33710754975397,
+      "cpu_one_core_pct": 99.97766381066722,
+      "reported_success_fraction": 0.012658227848101266,
+      "mean_iou": 0.0,
+      "success_iou_50": 0.0,
+      "precision_20px_original": 0.0
+    },
+    {
+      "sequence": "uav0000117_02622_v",
+      "target": [
+        "pedestrian",
+        0
+      ],
+      "tracker": "CSRT",
+      "frames": 80,
+      "scored_updates": 79,
+      "init_ms": 54.24992999996903,
+      "update_fps": 14.880945790941732,
+      "successful_update_fps": 14.880945790941732,
+      "p95_update_ms": 68.22973260004801,
+      "e2e_fps": 11.03301203072342,
+      "cpu_one_core_pct": 99.98229424986413,
+      "reported_success_fraction": 1.0,
+      "mean_iou": 0.007233618452065011,
+      "success_iou_50": 0.0,
+      "precision_20px_original": 0.0
+    }
+  ]
+}

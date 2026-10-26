@@ -1,0 +1,8 @@
+# Export tools only. Tested with an existing PyTorch 2.14.1+cpu / timm 1.0.30 environment.
+# Hailo parsing/optimization runs separately in the licensed DFC Docker environment.
+easydict==1.13
+einops==0.8.2
+onnx==1.23.2
+onnxruntime==1.31.0
+onnxsim==0.8.1
+yacs==0.1.8
