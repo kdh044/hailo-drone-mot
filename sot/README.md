@@ -1,5 +1,28 @@
 # 단일 객체 추적 기준선
 
+## 동일 검출 박스 초기화 추가 실험 (2026-10-26)
+
+[추가 실험 결과](results/shared_init_comparison.md),
+[추가 실험 곡선](results/shared_init_comparison.png).
+
+초기 선택 가능한 5/13개 대상에서 Holdfast의 첫 출력 박스를 KCF/CSRT에도 제공해
+같은 프레임·같은 검출 박스로 시작했다. 새 SOT 실행이며 Holdfast는 저장 결과를 사용했다.
+AUC: Holdfast 75.5, CSRT 원본 56.9 / ROI 55.5, KCF 원본 32.2 / ROI 31.3.
+읽기 포함 SOT 속도: CSRT 12.5 / 16.3 FPS, KCF 39.2 / 43.1 FPS.
+검출 가능한 대상에 한정한 작은 예비 실험이며 검출 실패한 8개 대상은 포함하지 않는다.
+
+```bash
+~/sot-venv/bin/python sot/shared_init.py
+~/sot-venv/bin/python sot/report_shared.py sot/results/shared_init.raw.json --output sot/results/shared_init_comparison.md
+```
+
+`shared_init.py`는 아래 기존 비교의 로컬 원본 결과 `modes_13targets.json`을 입력으로 사용한다.
+GitHub의 요약 파일만으로 표·곡선을 재생성하려면:
+
+```bash
+~/sot-venv/bin/python sot/report_shared.py sot/results/shared_init_comparison.summary.json --output /tmp/shared-init.md
+```
+
 ## 원본/ROI vs MOT 비교 (2026-10-26)
 
 [전체 결과 및 조건](results/modes_comparison.md),
