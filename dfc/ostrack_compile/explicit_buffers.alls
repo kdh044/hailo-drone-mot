@@ -1,0 +1,5 @@
+performance_param(compiler_optimization_level=max)
+context_switch_param(mode=enabled)
+allocator_param(automatic_reshapes=disabled, enable_partial_row_buffers=disabled, timeout=300)
+buffers(space_to_depth1, conv1, 0, PARTIAL_ROW)
+buffers(space_to_depth2, conv2, 0, PARTIAL_ROW)

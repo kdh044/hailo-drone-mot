@@ -44,3 +44,17 @@ HEF가 생성되더라도 DFC 서버 HailoRT 4.24와 Pi HailoRT 4.23의 호환�
 64쌍만 쓰는 단계가 있어, `model_optimization_config(calibration, batch_size=1,
 calibset_size=1024)`를 명시했다. 실제 로그의 `Using dataset with 1024 entries for
 calibration` 및 GPU 사용을 확인했다. AdaRound 완료나 HEF 생성의 의미는 아니다.
+
+## 최종 레벨 4 결과와 컴파일 우회
+
+1024개 서로 다른 이미지, optimization_level=4, compression_level=0으로
+양자화가 통과했다. 소요 시간은 20,930초(약 5시간 49분). AdaRound 92/92 완료.
+그 결과 HAR의 최대 성능 컴파일도 18초 후 conv2 reshape 할당 오류로 실패했다.
+HEF는 아직 생성되지 않았다.
+
+`dfc/probe_ostrack_compile.py`와 `dfc/ostrack_compile/*.alls`는 기존 양자화
+가중치를 그대로 사용하는 컴파일 전용 시도다. 버퍼 지정만으로는 같은 오류가
+발생했으며, search 패치의 공간 배치를 명시하는 시도를 진행한다. 이 설정들은
+성공이 검증된 배포 설정이 아니며 HEF 생성·하드웨어 수치 검사 전까지 실험용이다.
+
+공식 ViT ALLS 및 Hailo SDK 형식 변환 명령을 참조했다.

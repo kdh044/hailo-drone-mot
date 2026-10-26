@@ -1,0 +1,113 @@
+{
+  "protocol": "One selected target, full JPEG decode + prefetch preprocessing; real Hailo; first VisDrone val sequence; 120 frames per method; no GUI rendering or playback throttle; preliminary resource profile, not an accuracy comparison; inference wall fraction is not hardware NPU occupancy",
+  "results": [
+    {
+      "method": "KCF",
+      "frames": 120,
+      "wall_seconds": 2.680765851000615,
+      "hardware_pipeline_fps": 44.763327597301775,
+      "stages_ms": {
+        "wait_for_frame_ms": 0.03152566623612074,
+        "decode_ms": 7.124980908156431,
+        "prefetch_preprocess_ms": 3.3886335582792526,
+        "infer_ms": 1.1879606750274736,
+        "post_ms": 0.187022491627431,
+        "track_ms": 20.708930616880632
+      },
+      "detection_calls": 8,
+      "missing_boxes": 46,
+      "process_cpu_one_core_pct": 141.9,
+      "process_rss_mb": 326.203125,
+      "system_cpu_per_core_pct": [
+        14.26,
+        58.919999999999995,
+        61.0,
+        34.0
+      ],
+      "hailo_infer_wall_time_fraction_pct": 5.317707286896656,
+      "cpu_temperature_last": "43.5C",
+      "hailo_temperature_last": "31.1C"
+    },
+    {
+      "method": "CSRT",
+      "frames": 120,
+      "wall_seconds": 9.475096723996103,
+      "hardware_pipeline_fps": 12.66477836538541,
+      "stages_ms": {
+        "wait_for_frame_ms": 0.021446025008723762,
+        "decode_ms": 6.756209699778992,
+        "prefetch_preprocess_ms": 3.029861699906178,
+        "infer_ms": 0.0,
+        "post_ms": 0.0,
+        "track_ms": 78.72111617477155
+      },
+      "detection_calls": 0,
+      "missing_boxes": 0,
+      "process_cpu_one_core_pct": 112.93157894736844,
+      "process_rss_mb": 328.0,
+      "system_cpu_per_core_pct": [
+        14.963157894736844,
+        9.173684210526318,
+        100.0,
+        7.826315789473685
+      ],
+      "hailo_infer_wall_time_fraction_pct": 0.0,
+      "cpu_temperature_last": "48.0C",
+      "hailo_temperature_last": "31.0C"
+    },
+    {
+      "method": "bytetrack",
+      "frames": 120,
+      "wall_seconds": 2.683779892999155,
+      "hardware_pipeline_fps": 44.71305575879347,
+      "stages_ms": {
+        "wait_for_frame_ms": 0.4211719834226339,
+        "decode_ms": 18.913874725209705,
+        "prefetch_preprocess_ms": 3.422896299828911,
+        "infer_ms": 17.658349366865878,
+        "post_ms": 3.1316848336549206,
+        "track_ms": 0.7671388582214907
+      },
+      "detection_calls": 120,
+      "missing_boxes": 0,
+      "process_cpu_one_core_pct": 89.13333333333333,
+      "process_rss_mb": 328.953125,
+      "system_cpu_per_core_pct": [
+        25.36666666666667,
+        21.900000000000002,
+        38.71666666666667,
+        24.76666666666667
+      ],
+      "hailo_infer_wall_time_fraction_pct": 78.95587598489294,
+      "cpu_temperature_last": "45.8C",
+      "hailo_temperature_last": "32.7C"
+    },
+    {
+      "method": "holdfast",
+      "frames": 120,
+      "wall_seconds": 5.4010461709985975,
+      "hardware_pipeline_fps": 22.217917825689174,
+      "stages_ms": {
+        "wait_for_frame_ms": 0.019218258482093614,
+        "decode_ms": 6.786776791583786,
+        "prefetch_preprocess_ms": 3.016914167043675,
+        "infer_ms": 17.637358166696988,
+        "post_ms": 2.6355353334414153,
+        "track_ms": 24.39349973289306
+      },
+      "detection_calls": 120,
+      "missing_boxes": 9,
+      "process_cpu_one_core_pct": 92.30833333333334,
+      "process_rss_mb": 331.25,
+      "system_cpu_per_core_pct": [
+        29.108333333333334,
+        22.45,
+        27.675,
+        33.608333333333334
+      ],
+      "hailo_infer_wall_time_fraction_pct": 39.18653744099216,
+      "cpu_temperature_last": "45.8C",
+      "hailo_temperature_last": "33.5C"
+    }
+  ]
+}

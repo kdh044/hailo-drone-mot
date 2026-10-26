@@ -1,0 +1,18 @@
+{
+  "model": "OSTrack-384 CE-disabled compatibility variant",
+  "dfc": "3.34.0",
+  "target": "hailo8",
+  "samples": 1024,
+  "optimization_level": 4,
+  "compression_level": 0,
+  "calibration": "prepared",
+  "quantization": "passed",
+  "quantization_seconds": 20930.060107459023,
+  "compilation": "failed",
+  "compilation_seconds": 18.05440390401054,
+  "compile_error_type": "BackendAllocatorException",
+  "compile_error": "Compilation failed: Reshape is needed for layers: conv2, but adding a reshape has failed.",
+  "static_same_image_pairs": true,
+  "calibration_source": "existing RemDet calibration JPEGs; original split provenance not verified",
+  "accuracy_evaluation": "not_run"
+}

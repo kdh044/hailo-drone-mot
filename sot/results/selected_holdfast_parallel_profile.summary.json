@@ -1,0 +1,32 @@
+{
+  "protocol": "One selected target, full JPEG decode + prefetch preprocessing; real Hailo; first VisDrone val sequence; 120 frames per method; no GUI rendering or playback throttle; preliminary resource profile, not an accuracy comparison; inference wall fraction is not hardware NPU occupancy",
+  "results": [
+    {
+      "method": "holdfast",
+      "frames": 120,
+      "wall_seconds": 3.2288210580009036,
+      "hardware_pipeline_fps": 37.16526801714337,
+      "stages_ms": {
+        "wait_for_frame_ms": 0.022630341360733535,
+        "decode_ms": 21.834295350042037,
+        "prefetch_preprocess_ms": 4.270978733378191,
+        "infer_ms": 18.402969875266233,
+        "post_ms": 3.6492418834313867,
+        "track_ms": 26.635850974950397
+      },
+      "detection_calls": 120,
+      "missing_boxes": 9,
+      "process_cpu_one_core_pct": 164.59999999999997,
+      "process_rss_mb": 325.078125,
+      "system_cpu_per_core_pct": [
+        35.714285714285715,
+        52.74285714285715,
+        36.67142857142857,
+        65.04285714285714
+      ],
+      "hailo_infer_wall_time_fraction_pct": 68.3951307725685,
+      "cpu_temperature_last": "45.2C",
+      "hailo_temperature_last": "33.3C"
+    }
+  ]
+}
