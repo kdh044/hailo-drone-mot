@@ -1,5 +1,8 @@
 # 단일 객체 추적 기준선
 
+- [같은 조건의 전체 시스템 속도 측정 코드와 실행법](SYSTEM_BENCHMARK.md)
+- [E2E 후보 조사와 GitHub 인기도](../docs/e2e_tracker_candidates.md)
+
 [20초 비교 영상: KCF / CSRT / 검출+ByteTrack / 검출+Holdfast](results/tracker_comparison.mp4)
 
 원본 입력 추적 결과만 사용. 초록색=GT, 주황색=예측. 모든 칸은 같은 재생 속도이며
