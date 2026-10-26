@@ -2,3 +2,4 @@ __pycache__/
 results/modes_13targets.json
 results/*.raw.json
 results/*.tmp
+results/*_temp.mp4

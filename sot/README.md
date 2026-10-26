@@ -1,5 +1,17 @@
 # 단일 객체 추적 기준선
 
+[20초 비교 영상: KCF / CSRT / 검출+ByteTrack / 검출+Holdfast](results/tracker_comparison.mp4)
+
+원본 입력 추적 결과만 사용. 초록색=GT, 주황색=예측. 모든 칸은 같은 재생 속도이며
+실제 처리 속도를 표현하지 않는다. 확대 창은 관찰용이며 추적 입력의 ROI crop이 아니다.
+보행자 실패 사례와 차량 유지/실패 사례 3개를 선택해 총 20초로 구성했다.
+선택된 예시 영상이며 전체 정량 결과를 대신하지 않는다.
+
+```bash
+~/sot-venv/bin/python sot/render_comparison.py
+ffmpeg -i sot/results/tracker_comparison_temp.mp4 -c:v libx264 -pix_fmt yuv420p -movflags +faststart sot/results/tracker_comparison.mp4
+```
+
 ## 동일 검출 박스 초기화 추가 실험 (2026-10-26)
 
 [추가 실험 결과](results/shared_init_comparison.md),
