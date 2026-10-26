@@ -1,0 +1,528 @@
+{
+  "opencv": "4.10.0",
+  "threads": 1,
+  "width": 0,
+  "protocol": "VisDrone-derived SOT; first GT init only; no resets; decode+resize included in E2E",
+  "results": [
+    {
+      "sequence": "uav0000086_00000_v",
+      "target": [
+        "pedestrian",
+        11
+      ],
+      "tracker": "KCF",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 0.4708340002252953,
+      "update_fps": 225.5058040506687,
+      "successful_update_fps": 123.29317171422434,
+      "p95_update_ms": 4.412829400462215,
+      "e2e_fps": 79.55490007161787,
+      "cpu_one_core_pct": 87.4808757677374,
+      "reported_success_fraction": 0.020100502512562814,
+      "mean_iou": 0.016103864466675236,
+      "success_iou_50": 0.020100502512562814,
+      "precision_20px_original": 0.020100502512562814
+    },
+    {
+      "sequence": "uav0000086_00000_v",
+      "target": [
+        "pedestrian",
+        11
+      ],
+      "tracker": "CSRT",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 44.39470099987375,
+      "update_fps": 17.942839701496414,
+      "successful_update_fps": 17.942839701496414,
+      "p95_update_ms": 58.414768100010406,
+      "e2e_fps": 16.06257075234133,
+      "cpu_one_core_pct": 99.98184580947171,
+      "reported_success_fraction": 1.0,
+      "mean_iou": 0.14415804649545558,
+      "success_iou_50": 0.12562814070351758,
+      "precision_20px_original": 0.1658291457286432
+    },
+    {
+      "sequence": "uav0000117_02622_v",
+      "target": [
+        "pedestrian",
+        0
+      ],
+      "tracker": "KCF",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 0.6462790006480645,
+      "update_fps": 122.51031249403688,
+      "successful_update_fps": 107.87749517796621,
+      "p95_update_ms": 8.748971399472794,
+      "e2e_fps": 28.4540039902267,
+      "cpu_one_core_pct": 89.49935582176252,
+      "reported_success_fraction": 0.005025125628140704,
+      "mean_iou": 0.0,
+      "success_iou_50": 0.0,
+      "precision_20px_original": 0.0
+    },
+    {
+      "sequence": "uav0000117_02622_v",
+      "target": [
+        "pedestrian",
+        0
+      ],
+      "tracker": "CSRT",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 54.23712500032707,
+      "update_fps": 14.644383067116417,
+      "successful_update_fps": 14.644383067116417,
+      "p95_update_ms": 71.30295639963151,
+      "e2e_fps": 11.012296377763418,
+      "cpu_one_core_pct": 99.9448417750859,
+      "reported_success_fraction": 1.0,
+      "mean_iou": 0.0028716374759454066,
+      "success_iou_50": 0.0,
+      "precision_20px_original": 0.0
+    },
+    {
+      "sequence": "uav0000117_02622_v",
+      "target": [
+        "car",
+        23
+      ],
+      "tracker": "KCF",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 1.034945999890624,
+      "update_fps": 39.44698184323022,
+      "successful_update_fps": 39.44698184323022,
+      "p95_update_ms": 25.486917900070694,
+      "e2e_fps": 20.92164646453063,
+      "cpu_one_core_pct": 99.98038388519404,
+      "reported_success_fraction": 1.0,
+      "mean_iou": 0.3552698023528643,
+      "success_iou_50": 0.02512562814070352,
+      "precision_20px_original": 0.0
+    },
+    {
+      "sequence": "uav0000117_02622_v",
+      "target": [
+        "car",
+        23
+      ],
+      "tracker": "CSRT",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 76.63432899971667,
+      "update_fps": 11.335865985445473,
+      "successful_update_fps": 11.335865985445473,
+      "p95_update_ms": 91.56893750014206,
+      "e2e_fps": 9.036451200752943,
+      "cpu_one_core_pct": 99.98035546445061,
+      "reported_success_fraction": 1.0,
+      "mean_iou": 0.3598135705050745,
+      "success_iou_50": 0.07537688442211055,
+      "precision_20px_original": 0.0
+    },
+    {
+      "sequence": "uav0000137_00458_v",
+      "target": [
+        "pedestrian",
+        41
+      ],
+      "tracker": "KCF",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 0.9727800006658072,
+      "update_fps": 62.673363953158706,
+      "successful_update_fps": 44.51041998687763,
+      "p95_update_ms": 22.669386900088284,
+      "e2e_fps": 21.879670493265987,
+      "cpu_one_core_pct": 85.27874140745593,
+      "reported_success_fraction": 0.271356783919598,
+      "mean_iou": 0.2278825876719091,
+      "success_iou_50": 0.271356783919598,
+      "precision_20px_original": 0.271356783919598
+    },
+    {
+      "sequence": "uav0000137_00458_v",
+      "target": [
+        "pedestrian",
+        41
+      ],
+      "tracker": "CSRT",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 61.30036200011091,
+      "update_fps": 14.465815669071965,
+      "successful_update_fps": 14.465815669071965,
+      "p95_update_ms": 71.66237450010158,
+      "e2e_fps": 10.844671738440182,
+      "cpu_one_core_pct": 99.97779298069743,
+      "reported_success_fraction": 1.0,
+      "mean_iou": 0.7216283769862416,
+      "success_iou_50": 0.8894472361809045,
+      "precision_20px_original": 0.8944723618090452
+    },
+    {
+      "sequence": "uav0000137_00458_v",
+      "target": [
+        "car",
+        13
+      ],
+      "tracker": "KCF",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 0.8111870001812349,
+      "update_fps": 45.12553807341207,
+      "successful_update_fps": 45.12553807341207,
+      "p95_update_ms": 22.27894279949396,
+      "e2e_fps": 22.138355034321258,
+      "cpu_one_core_pct": 99.98054862139993,
+      "reported_success_fraction": 1.0,
+      "mean_iou": 0.8698440635631907,
+      "success_iou_50": 1.0,
+      "precision_20px_original": 1.0
+    },
+    {
+      "sequence": "uav0000137_00458_v",
+      "target": [
+        "car",
+        13
+      ],
+      "tracker": "CSRT",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 67.812094999681,
+      "update_fps": 12.666259843246952,
+      "successful_update_fps": 12.666259843246952,
+      "p95_update_ms": 82.38045949965453,
+      "e2e_fps": 9.803766352899515,
+      "cpu_one_core_pct": 99.98040680040023,
+      "reported_success_fraction": 1.0,
+      "mean_iou": 0.816598952309542,
+      "success_iou_50": 1.0,
+      "precision_20px_original": 0.9949748743718593
+    },
+    {
+      "sequence": "uav0000182_00000_v",
+      "target": [
+        "pedestrian",
+        75
+      ],
+      "tracker": "KCF",
+      "frames": 127,
+      "scored_updates": 126,
+      "init_ms": 0.16853699980856618,
+      "update_fps": 502.75559142112377,
+      "successful_update_fps": 343.56573147645537,
+      "p95_update_ms": 2.9502642496481712,
+      "e2e_fps": 95.87644166521501,
+      "cpu_one_core_pct": 86.23281833962751,
+      "reported_success_fraction": 0.31746031746031744,
+      "mean_iou": 0.24118300799004314,
+      "success_iou_50": 0.31746031746031744,
+      "precision_20px_original": 0.31746031746031744
+    },
+    {
+      "sequence": "uav0000182_00000_v",
+      "target": [
+        "pedestrian",
+        75
+      ],
+      "tracker": "CSRT",
+      "frames": 127,
+      "scored_updates": 126,
+      "init_ms": 27.81108400085941,
+      "update_fps": 29.025166855098373,
+      "successful_update_fps": 29.025166855098373,
+      "p95_update_ms": 35.040698249986235,
+      "e2e_fps": 24.124952438249572,
+      "cpu_one_core_pct": 99.98266027591586,
+      "reported_success_fraction": 1.0,
+      "mean_iou": 0.5553222941006422,
+      "success_iou_50": 0.5714285714285714,
+      "precision_20px_original": 1.0
+    },
+    {
+      "sequence": "uav0000182_00000_v",
+      "target": [
+        "car",
+        127
+      ],
+      "tracker": "KCF",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 0.1269999993382953,
+      "update_fps": 458.93203660430135,
+      "successful_update_fps": 412.0585215126258,
+      "p95_update_ms": 2.4557876995459083,
+      "e2e_fps": 90.78491410686064,
+      "cpu_one_core_pct": 86.67940036449365,
+      "reported_success_fraction": 0.7688442211055276,
+      "mean_iou": 0.5921454636635436,
+      "success_iou_50": 0.7487437185929648,
+      "precision_20px_original": 0.7688442211055276
+    },
+    {
+      "sequence": "uav0000182_00000_v",
+      "target": [
+        "car",
+        127
+      ],
+      "tracker": "CSRT",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 26.463101000445022,
+      "update_fps": 31.280876661731927,
+      "successful_update_fps": 31.280876661731927,
+      "p95_update_ms": 32.31240129989601,
+      "e2e_fps": 25.417529428589123,
+      "cpu_one_core_pct": 99.98128624228838,
+      "reported_success_fraction": 1.0,
+      "mean_iou": 0.7442389816519739,
+      "success_iou_50": 0.9396984924623115,
+      "precision_20px_original": 1.0
+    },
+    {
+      "sequence": "uav0000268_05773_v",
+      "target": [
+        "pedestrian",
+        26
+      ],
+      "tracker": "KCF",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 0.19686999985424336,
+      "update_fps": 135.0555404096377,
+      "successful_update_fps": 132.22205294441488,
+      "p95_update_ms": 7.821393199537851,
+      "e2e_fps": 16.207210386720675,
+      "cpu_one_core_pct": 88.51991078400859,
+      "reported_success_fraction": 0.8894472361809045,
+      "mean_iou": 0.4330819588727706,
+      "success_iou_50": 0.5125628140703518,
+      "precision_20px_original": 0.8894472361809045
+    },
+    {
+      "sequence": "uav0000268_05773_v",
+      "target": [
+        "pedestrian",
+        26
+      ],
+      "tracker": "CSRT",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 91.46050900017144,
+      "update_fps": 10.141124552780699,
+      "successful_update_fps": 10.141124552780699,
+      "p95_update_ms": 100.36207259963703,
+      "e2e_fps": 6.874673634515139,
+      "cpu_one_core_pct": 99.98198056607104,
+      "reported_success_fraction": 1.0,
+      "mean_iou": 0.49263275622825914,
+      "success_iou_50": 0.6482412060301508,
+      "precision_20px_original": 1.0
+    },
+    {
+      "sequence": "uav0000268_05773_v",
+      "target": [
+        "car",
+        8
+      ],
+      "tracker": "KCF",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 0.2795930004140246,
+      "update_fps": 105.89187810810013,
+      "successful_update_fps": 105.89187810810013,
+      "p95_update_ms": 9.704796399910265,
+      "e2e_fps": 15.609310823162273,
+      "cpu_one_core_pct": 88.9958800326091,
+      "reported_success_fraction": 1.0,
+      "mean_iou": 0.8730974241368662,
+      "success_iou_50": 1.0,
+      "precision_20px_original": 1.0
+    },
+    {
+      "sequence": "uav0000268_05773_v",
+      "target": [
+        "car",
+        8
+      ],
+      "tracker": "CSRT",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 77.01807900048152,
+      "update_fps": 11.865974263133092,
+      "successful_update_fps": 11.865974263133092,
+      "p95_update_ms": 85.40926940004283,
+      "e2e_fps": 7.593483447140561,
+      "cpu_one_core_pct": 99.97900713539315,
+      "reported_success_fraction": 1.0,
+      "mean_iou": 0.858987262617,
+      "success_iou_50": 1.0,
+      "precision_20px_original": 1.0
+    },
+    {
+      "sequence": "uav0000305_00000_v",
+      "target": [
+        "pedestrian",
+        55
+      ],
+      "tracker": "KCF",
+      "frames": 184,
+      "scored_updates": 165,
+      "init_ms": 0.11850099963339744,
+      "update_fps": 562.8272269396565,
+      "successful_update_fps": 392.1280252641031,
+      "p95_update_ms": 2.5779587000215543,
+      "e2e_fps": 60.19107201106172,
+      "cpu_one_core_pct": 78.20412628674461,
+      "reported_success_fraction": 0.09289617486338798,
+      "mean_iou": 0.08107805964391136,
+      "success_iou_50": 0.10303030303030303,
+      "precision_20px_original": 0.10303030303030303
+    },
+    {
+      "sequence": "uav0000305_00000_v",
+      "target": [
+        "pedestrian",
+        55
+      ],
+      "tracker": "CSRT",
+      "frames": 184,
+      "scored_updates": 165,
+      "init_ms": 32.74324199992407,
+      "update_fps": 28.087029306225038,
+      "successful_update_fps": 25.389904456824777,
+      "p95_update_ms": 40.112599600342946,
+      "e2e_fps": 21.340347520817772,
+      "cpu_one_core_pct": 99.98096996545655,
+      "reported_success_fraction": 0.8961748633879781,
+      "mean_iou": 0.5661942748543016,
+      "success_iou_50": 0.6484848484848484,
+      "precision_20px_original": 0.8909090909090909
+    },
+    {
+      "sequence": "uav0000305_00000_v",
+      "target": [
+        "car",
+        22
+      ],
+      "tracker": "KCF",
+      "frames": 184,
+      "scored_updates": 183,
+      "init_ms": 0.4532039993137005,
+      "update_fps": 58.389297347889034,
+      "successful_update_fps": 55.40054998166965,
+      "p95_update_ms": 18.16663420004261,
+      "e2e_fps": 35.39387907223219,
+      "cpu_one_core_pct": 99.98185500088923,
+      "reported_success_fraction": 0.7978142076502732,
+      "mean_iou": 0.6632809966405253,
+      "success_iou_50": 0.7978142076502732,
+      "precision_20px_original": 0.7978142076502732
+    },
+    {
+      "sequence": "uav0000305_00000_v",
+      "target": [
+        "car",
+        22
+      ],
+      "tracker": "CSRT",
+      "frames": 184,
+      "scored_updates": 183,
+      "init_ms": 44.2798740004946,
+      "update_fps": 17.60803592318964,
+      "successful_update_fps": 17.60803592318964,
+      "p95_update_ms": 58.8834093994592,
+      "e2e_fps": 14.70308437784205,
+      "cpu_one_core_pct": 99.98049735742886,
+      "reported_success_fraction": 1.0,
+      "mean_iou": 0.6761861896319485,
+      "success_iou_50": 0.7978142076502732,
+      "precision_20px_original": 0.73224043715847
+    },
+    {
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "pedestrian",
+        17
+      ],
+      "tracker": "KCF",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 0.26668600003176834,
+      "update_fps": 256.07321443418164,
+      "successful_update_fps": 154.6830329312348,
+      "p95_update_ms": 6.713646599837375,
+      "e2e_fps": 51.627912745744716,
+      "cpu_one_core_pct": 75.26460196509258,
+      "reported_success_fraction": 0.16080402010050251,
+      "mean_iou": 0.1344936578575741,
+      "success_iou_50": 0.16080402010050251,
+      "precision_20px_original": 0.16080402010050251
+    },
+    {
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "pedestrian",
+        17
+      ],
+      "tracker": "CSRT",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 59.74071700075001,
+      "update_fps": 13.894060906509957,
+      "successful_update_fps": 13.894060906509957,
+      "p95_update_ms": 72.7549324003121,
+      "e2e_fps": 12.107922469911763,
+      "cpu_one_core_pct": 99.98208731549941,
+      "reported_success_fraction": 1.0,
+      "mean_iou": 0.6136990616100427,
+      "success_iou_50": 0.6231155778894473,
+      "precision_20px_original": 0.9296482412060302
+    },
+    {
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "car",
+        5
+      ],
+      "tracker": "KCF",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 0.5712790007237345,
+      "update_fps": 136.5425174155253,
+      "successful_update_fps": 82.57641128226378,
+      "p95_update_ms": 12.280910599565686,
+      "e2e_fps": 55.89521806404152,
+      "cpu_one_core_pct": 99.9803526911111,
+      "reported_success_fraction": 0.16080402010050251,
+      "mean_iou": 0.11462580833271815,
+      "success_iou_50": 0.15577889447236182,
+      "precision_20px_original": 0.16080402010050251
+    },
+    {
+      "sequence": "uav0000339_00001_v",
+      "target": [
+        "car",
+        5
+      ],
+      "tracker": "CSRT",
+      "frames": 200,
+      "scored_updates": 199,
+      "init_ms": 41.16270299982716,
+      "update_fps": 18.97616131748946,
+      "successful_update_fps": 18.97616131748946,
+      "p95_update_ms": 53.42177510046895,
+      "e2e_fps": 15.790115550745025,
+      "cpu_one_core_pct": 99.98151085630964,
+      "reported_success_fraction": 1.0,
+      "mean_iou": 0.4476780654184128,
+      "success_iou_50": 0.20100502512562815,
+      "precision_20px_original": 0.7537688442211056
+    }
+  ]
+}
