@@ -68,6 +68,9 @@ def main():
     p.add_argument('--samples',type=int,default=1024)
     p.add_argument('--output-dir',type=Path,required=True)
     p.add_argument('--compile',action='store_true')
+    p.add_argument('--work-dir',type=Path,help='Optimizer temporary cache directory, separate from final HAR/HEF outputs')
+    p.add_argument('--cache-compression',action='store_true',help='Lossless AdaRound intermediate cache compression; model compression remains zero')
+    p.add_argument('--alls',type=Path,help='Additional transformer-specific optimization script; sample/level requirements remain enforced')
     p.add_argument('--reuse-prepared',action='store_true',help='Reuse this output directory NPZ and unique-image manifest')
     a=p.parse_args()
     if a.samples < 1024:
@@ -133,10 +136,20 @@ def main():
         report.update(calibration='prepared',samples=len(templates),input_shapes={k:list(v.shape) for k,v in data.items()},quantization='running')
         save();print('CALIBRATION PREPARED',a.samples,flush=True)
         runner=ClientRunner(har=str(a.har))
-        runner.load_model_script(f'model_optimization_flavor(optimization_level=4, compression_level=0)\nmodel_optimization_config(calibration, batch_size=1, calibset_size={a.samples})\n')
+        script=(a.alls.read_text()+'\n') if a.alls else ''
+        script+=f'model_optimization_flavor(optimization_level=4, compression_level=0)\nmodel_optimization_config(calibration, batch_size=1, calibset_size={a.samples})\n'
+        if a.cache_compression:
+            script+='post_quantization_optimization(adaround, policy=enabled, dataset_size=1024, cache_compression=enabled)\n'
+        report['cache_compression']=a.cache_compression
+        report['optimization_script']=script
+        save()
+        runner.load_model_script(script)
         start=time.perf_counter()
-        (a.output_dir/'optimize').mkdir(parents=True,exist_ok=True)
-        runner.optimize(data,work_dir=str(a.output_dir/'optimize'))
+        work_dir=a.work_dir or a.output_dir/'optimize'
+        work_dir.mkdir(parents=True,exist_ok=True)
+        report['optimizer_cache_directory']=str(work_dir)
+        save()
+        runner.optimize(data,work_dir=str(work_dir))
         quant=a.output_dir/'ostrack384_noce_quant.har'
         runner.save_har(str(quant))
         report.update(quantization='passed',quantization_seconds=time.perf_counter()-start,optimized_har=quant.name)

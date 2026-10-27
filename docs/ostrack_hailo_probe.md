@@ -58,3 +58,26 @@ HEF는 아직 생성되지 않았다.
 성공이 검증된 배포 설정이 아니며 HEF 생성·하드웨어 수치 검사 전까지 실험용이다.
 
 공식 ViT ALLS 및 Hailo SDK 형식 변환 명령을 참조했다.
+
+## ViT 전용 설정 재시도와 저장공간 조치
+
+기존 HAR의 수동 공간 배치로 conv2 오류를 우회했으나, 이후 첫 Attention
+`matmul1`의 Titan 분할 오류가 확인됐다. 기존 graph의 `zp_comp_weights` 방식 대신
+공식 ViT 설정의 `zp_comp_block`, 덧셈 fusion 분리, negative exponent rank=0을
+적용한 레벨 4 재양자화를 시작했다. 원본 CE-disabled ONNX/가중치는 유지한다.
+
+첫 재시도는 AdaRound 캐시 최대 추정 181.19GB에 비해 디스크 여유가
+106.57GiB여서 중단됐다. 데이터 수나 레벨은 줄이지 않았다. SDK가 지원하는
+`cache_compression=enabled`는 `numpy.savez_compressed` 기반의 무손실 중간 캐시
+압축이다. 모델 압축 `compression_level=0`과는 별개이며, 양자화 정밀도를 낮추지 않는다.
+
+임시 optimizer work dir를 태스크 전용 tmpfs로 옮기고, 디스크·메모리 여유가
+부족해지면 해당 child job만 중지하는 `dfc/run_storage_guard.py`를 붙였다.
+`dfc/cleanup_optimizer_cache.py`는 작업 종료 후 전용 임시 캐시만 해제한다.
+최종 HAR/HEF와 보고서는 영구 작업 폴더에 남긴다. 수정한 실행에서
+1024개 데이터로 AdaRound 단계 진입을 확인했다. 최종 HEF 성공은 아직 미확인.
+
+HEF 성공 후에는 Pi의 HailoRT 형식 검사와 `dfc/smoke_ostrack_hef.py`로
+실제 장치 실행을 확인한다. 이 검사는 정적인 입력쌍의 finite 출력 확인이며
+추적 정확도나 실시간 카메라 성능 검증이 아니다. 장치가 사용 중이면 기존
+프로그램을 중지하지 않고 비는 시점을 기다린다.

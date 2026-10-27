@@ -1,0 +1,7 @@
+performance_param(compiler_optimization_level=0)
+context_switch_param(mode=enabled)
+allocator_param(automatic_reshapes=disabled, enable_auto_spatial_reshapes=False, enable_partial_row_buffers=disabled, timeout=120)
+patch_search = format_conversion(space_to_depth2, conv2, spatial_reshape, 24, 24, collapse=False, input_windows=[1, 1, 1], output_windows=[1, 1, 1])
+pos_search = format_conversion(const_input2, conv2, spatial_reshape, 24, 24, collapse=True, input_windows=[1, 1, 1], output_windows=[1, 1, 1])
+search_flat = format_conversion(conv2, concat1, spatial_reshape, 1, 576, collapse=False, input_windows=[1, 1, 1], output_windows=[1, 1, 1])
+resources_param(strategy=greedy, max_compute_utilization=0.8, max_control_utilization=1.0, max_memory_utilization=0.8)
